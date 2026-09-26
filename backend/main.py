@@ -375,6 +375,10 @@ def create_app() -> FastAPI:
 
     # Serve React frontend if built
     frontend_dist = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+    if not frontend_dist.exists():
+        # fallback for Railway: /app/frontend/dist
+        frontend_dist = Path("/app/frontend/dist")
+
     if frontend_dist.exists():
         app.mount("/assets", StaticFiles(directory=frontend_dist / "assets"), name="assets")
 
