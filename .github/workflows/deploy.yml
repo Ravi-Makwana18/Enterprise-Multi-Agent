@@ -27,7 +27,9 @@ jobs:
           curl --fail http://127.0.0.1:8001/health
 
       - name: Deploy to staging
-        run: ./infrastructure/deploy/deploy.sh staging ${{ github.sha }}
+        run: |
+          chmod +x ./infrastructure/deploy/deploy.sh
+          ./infrastructure/deploy/deploy.sh staging ${{ github.sha }}
 
   deploy-production:
     name: Deploy production
@@ -40,4 +42,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to production
-        run: ./infrastructure/deploy/deploy.sh production ${{ github.sha }}
+        run: |
+          chmod +x ./infrastructure/deploy/deploy.sh
+          ./infrastructure/deploy/deploy.sh production ${{ github.sha }}
