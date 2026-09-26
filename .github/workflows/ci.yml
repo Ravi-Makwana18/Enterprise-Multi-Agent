@@ -24,6 +24,12 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run backend unit tests
+        env:
+          ALLOW_DEMO_AUTH: "true"
+          API_TOKENS: "user-demo-token:user,admin-demo-token:admin"
+          ENVIRONMENT: "test"
+          DATABASE_URL: "sqlite:///./test.db"
+          LOCAL_MODE: "true"
         run: python -m unittest discover -s tests -p "test*.py" -v
 
   frontend-build:
