@@ -1,11 +1,15 @@
 [phases.setup]
-nixPkgs = ["python311", "nodejs_20", "npm-9_x"]
+nixPkgs = ["python311", "nodejs_20"]
 
 [phases.install]
 cmds = [
   "pip install -r requirements.txt",
-  "pip install aiofiles",
-  "cd frontend && npm ci && npm run build && cd .."
+  "pip install aiofiles"
+]
+
+[phases.build]
+cmds = [
+  "bash build.sh"
 ]
 
 [start]
