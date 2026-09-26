@@ -1,0 +1,65 @@
+CREATE TABLE IF NOT EXISTS tickets (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ticket_id TEXT UNIQUE NOT NULL,
+  summary TEXT NOT NULL,
+  status TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS employees (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  employee_id TEXT UNIQUE NOT NULL,
+  employee_name TEXT NOT NULL,
+  basic_salary REAL NOT NULL,
+  hra REAL NOT NULL,
+  bonus REAL NOT NULL,
+  pan TEXT NOT NULL,
+  account_number TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS reviews (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  review_id TEXT UNIQUE NOT NULL,
+  review_type TEXT NOT NULL,
+  content TEXT,
+  score REAL,
+  approved BOOLEAN DEFAULT 0,
+  issues TEXT,
+  recommendations TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS security_checks (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  security_id TEXT UNIQUE NOT NULL,
+  employee_id TEXT,
+  employee_name TEXT NOT NULL,
+  passport TEXT,
+  aadhaar TEXT,
+  address TEXT,
+  police_verification TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS workflow_states (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  workflow_id TEXT UNIQUE NOT NULL,
+  user_input TEXT,
+  route TEXT,
+  response TEXT,
+  score REAL,
+  approved BOOLEAN DEFAULT 0,
+  iteration INTEGER DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS user_actions (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  action TEXT NOT NULL,
+  username TEXT,
+  role TEXT,
+  details TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

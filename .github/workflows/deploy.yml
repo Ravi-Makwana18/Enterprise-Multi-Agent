@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  deploy-staging:
+    name: Deploy staging
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Build container image
+        run: docker build -t enterprise-multi-agent:${{ github.sha }} .
+
+      - name: Smoke test container
+        run: docker run --rm -d -p 8001:8001 --name enterprise-multi-agent enterprise-multi-agent:${{ github.sha }}
+
+      - name: Run health check
+        run: |
+          sleep 5
+          curl --fail http://127.0.0.1:8001/health
+
+      - name: Deploy to staging
+        run: ./infrastructure/deploy/deploy.sh staging ${{ github.sha }}
+
+  deploy-production:
+    name: Deploy production
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    environment: production
+    if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Deploy to production
+        run: ./infrastructure/deploy/deploy.sh production ${{ github.sha }}

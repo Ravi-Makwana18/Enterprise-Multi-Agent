@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+langchain
+langgraph
+langchain-aws
+boto3
+pydantic
+python-dotenv
+requests
+sqlalchemy
