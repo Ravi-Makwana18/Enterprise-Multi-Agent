@@ -1,13 +1,16 @@
 import json
 import logging
+import os
 import time
 import uuid
 from collections import defaultdict, deque
+from pathlib import Path
 
 from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from backend.config import settings
 from backend.core.audit import log_audit
@@ -369,6 +372,15 @@ def create_app() -> FastAPI:
                 "database_url": settings.database_url,
             },
         )
+
+    # Serve React frontend if built
+    frontend_dist = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+    if frontend_dist.exists():
+        app.mount("/assets", StaticFiles(directory=frontend_dist / "assets"), name="assets")
+
+        @app.get("/{full_path:path}", include_in_schema=False)
+        async def serve_frontend(full_path: str):
+            return FileResponse(frontend_dist / "index.html")
 
     return app
 

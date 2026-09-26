@@ -18,7 +18,4 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 4173,
   },
-  define: {
-    __BACKEND_URL__: JSON.stringify(process.env.VITE_BACKEND_URL || ''),
-  },
 })

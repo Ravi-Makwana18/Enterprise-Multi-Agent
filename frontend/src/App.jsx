@@ -136,13 +136,11 @@ function extractErrorMessage(error) {
   return 'Something went wrong while contacting the service.'
 }
 
-const BACKEND_URL = typeof __BACKEND_URL__ !== 'undefined' ? __BACKEND_URL__ : ''
-
 async function requestJson(url, options = {}, session) {
   if (!url.startsWith('/api/')) {
     throw new Error('Invalid request path.')
   }
-  const fullUrl = BACKEND_URL ? `${BACKEND_URL}${url.replace('/api', '')}` : url
+  const fullUrl = url.replace('/api', '')
   const headers = {
     ...(options.headers || {}),
     ...createAuthHeaders(session),
