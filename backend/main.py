@@ -109,6 +109,12 @@ def create_app() -> FastAPI:
         description="Enterprise multi-agent platform backend.",
     )
 
+    @app.middleware("http")
+    async def rewrite_api_prefix(request: Request, call_next):
+        if request.scope.get("path", "").startswith("/api/"):
+            request.scope["path"] = request.scope["path"][4:]
+        return await call_next(request)
+
     app.middleware("http")(telemetry_middleware)
     app.middleware("http")(rate_limit_middleware)
     app.add_middleware(
