@@ -8,6 +8,7 @@ class BlogReview(BaseModel):
     issues: List[str] = []
     recommendations: List[str] = []
     message: Optional[str] = None
+    blog_content: Optional[str] = None
     status: Optional[str] = "in review"
     risk_level: Optional[str] = "medium"
     requires_human_review: bool = False

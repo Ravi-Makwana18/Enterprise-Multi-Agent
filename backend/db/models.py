@@ -13,7 +13,7 @@ class Ticket(Base):
     id = Column(Integer, primary_key=True, index=True)
     ticket_id = Column(String(64), unique=True, nullable=False, index=True)
     summary = Column(Text, nullable=False)
-    status = Column(String(32), nullable=False, default="submitted")
+    status = Column(String(32), nullable=True, default="submitted")
     category = Column(String(64), nullable=False, default="general")
     priority = Column(String(32), nullable=False, default="normal")
     requester = Column(String(255), nullable=True)
@@ -81,6 +81,8 @@ class WorkflowState(Base):
     score = Column(Float, default=0.0)
     approved = Column(Boolean, default=False)
     iteration = Column(Integer, default=0)
+    status = Column(String(32), nullable=True, default="submitted")
+    execution_history = Column(Text, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
 

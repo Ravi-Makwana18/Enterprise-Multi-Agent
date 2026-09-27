@@ -21,7 +21,7 @@ HF_MODELS = {
 }
 
 HF_CHAT_URL = "https://router.huggingface.co/v1/chat/completions"
-_TIMEOUT = 45
+_TIMEOUT = 12
 
 
 def _get_token() -> str | None:
