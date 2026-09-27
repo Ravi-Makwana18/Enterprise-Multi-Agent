@@ -25,6 +25,12 @@ jobs:
         run: |
           sleep 5
           curl --fail http://127.0.0.1:8001/health
+          docker stop enterprise-multi-agent || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
       - name: Deploy to staging
         run: |
@@ -40,6 +46,11 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
       - name: Deploy to production
         run: |
