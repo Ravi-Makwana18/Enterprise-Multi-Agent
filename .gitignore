@@ -5,4 +5,10 @@ __pycache__/
 node_modules/
 *.db
 *.sqlite
+*.db-wal
+*.db-shm
 *.log
+frontend/dist/
+chroma_db/
+backend/data/chroma_db/
+

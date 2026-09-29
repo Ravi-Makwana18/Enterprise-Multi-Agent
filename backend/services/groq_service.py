@@ -11,15 +11,18 @@ from backend.config import settings
 logger = logging.getLogger(__name__)
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.1-8b-instant"  # free tier
 _TIMEOUT = 30
+
+
+def _get_model() -> str:
+    return os.getenv("GROQ_MODEL") or getattr(settings, "groq_model", "openai/gpt-oss-120b")
 
 
 def _get_token() -> str | None:
     return os.getenv("GROQ_API_KEY") or getattr(settings, "groq_api_key", None)
 
 
-def _call_groq(prompt: str, system_prompt: str | None = None, max_tokens: int = 768) -> str:
+def _call_groq(prompt: str, system_prompt: str | None = None, max_tokens: int = 1536) -> str:
     token = _get_token()
     if not token:
         raise ValueError("GROQ_API_KEY not set")
@@ -32,10 +35,11 @@ def _call_groq(prompt: str, system_prompt: str | None = None, max_tokens: int = 
         {"role": "user", "content": prompt},
     ]
 
+    model = _get_model()
     resp = requests.post(
         GROQ_URL,
         headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
-        json={"model": GROQ_MODEL, "messages": messages, "temperature": 0.2, "max_tokens": max_tokens},
+        json={"model": model, "messages": messages, "temperature": 0.2, "max_tokens": max_tokens},
         timeout=_TIMEOUT,
     )
     resp.raise_for_status()
@@ -171,7 +175,7 @@ def generate(prompt: str, model_key: str = "default", system_prompt: str | None 
         raw = _call_groq(prompt, system_prompt=system_prompt)
         data = _extract_json(raw)
         data.setdefault("fallback", False)
-        data.setdefault("model", GROQ_MODEL)
+        data.setdefault("model", _get_model())
         return data
     except Exception as exc:
         logger.warning("Groq call failed (%s): %s", model_key, exc)

@@ -53,3 +53,25 @@ def list_security_checks():
         ]
     finally:
         session.close()
+
+
+def get_security_check_by_employee_id(employee_id: str):
+    session = SessionLocal()
+    try:
+        row = session.execute(
+            select(SecurityCheck).where(SecurityCheck.employee_id == employee_id).order_by(SecurityCheck.created_at.desc())
+        ).scalars().first()
+        if row is None:
+            return None
+        return {
+            "security_id": row.security_id,
+            "employee_id": row.employee_id,
+            "employee_name": row.employee_name,
+            "passport": row.passport,
+            "aadhaar": row.aadhaar,
+            "address": row.address,
+            "police_verification": row.police_verification,
+        }
+    finally:
+        session.close()
+

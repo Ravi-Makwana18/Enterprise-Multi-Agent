@@ -1,4 +1,5 @@
 import os
+from contextlib import contextmanager
 from pathlib import Path
 
 from sqlalchemy import create_engine, text
@@ -20,12 +21,18 @@ engine = create_engine(
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 
 
-def get_db_session() -> Session:
-    session = SessionLocal()
+@contextmanager
+def get_db_session():
+    """Yield a database session and ensure it is always closed."""
+    session: Session = SessionLocal()
     try:
-        return session
+        yield session
+        session.commit()
+    except Exception:
+        session.rollback()
+        raise
     finally:
-        pass
+        session.close()
 
 
 def initialize_database(force: bool = False) -> None:

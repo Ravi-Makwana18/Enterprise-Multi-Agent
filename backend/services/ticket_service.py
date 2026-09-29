@@ -79,7 +79,10 @@ def get_ticket(ticket_id: str):
             "priority": getattr(ticket, "priority", "normal"),
             "requester": getattr(ticket, "requester", None),
             "assignee": getattr(ticket, "assignee", None),
+            "reviewed_by": getattr(ticket, "reviewed_by", None),
+            "review_notes": getattr(ticket, "review_notes", None),
             "created_at": ticket.created_at.isoformat() if ticket.created_at else None,
+            "updated_at": ticket.updated_at.isoformat() if ticket.updated_at else None,
         }
     finally:
         session.close()
@@ -98,7 +101,10 @@ def list_tickets():
                 "priority": getattr(row, "priority", "normal"),
                 "requester": getattr(row, "requester", None),
                 "assignee": getattr(row, "assignee", None),
+                "reviewed_by": getattr(row, "reviewed_by", None),
+                "review_notes": getattr(row, "review_notes", None),
                 "created_at": row.created_at.isoformat() if row.created_at else None,
+                "updated_at": row.updated_at.isoformat() if row.updated_at else None,
             }
             for row in rows
         ]

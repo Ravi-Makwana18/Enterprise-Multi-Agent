@@ -1,9 +1,6 @@
 import unittest
 from unittest.mock import patch
 
-from backend.agents.blog_agent import analyze_blog
-from backend.agents.blog_ai_review import ai_review_blog
-from backend.agents.blog_ai_rewrite import ai_rewrite_blog
 from backend.agents.salary_agent import calculate_employee_salary
 from backend.agents.security_agent import run_security_check
 from backend.agents.support_agent import create_support_ticket
@@ -46,7 +43,7 @@ class TestLLMAgents(unittest.TestCase):
         }
 
         state = {
-            "user_input": "Please calculate salary for employee Mark EMP-305 with basic $70000, HRA $14000, and bonus $6000",
+            "user_input": "Please calculate salary for employee Mark EMP-305 with basic ₹70000, HRA ₹14000, and bonus ₹6000",
             "route": "SALARY",
             "response": {},
             "score": 0,

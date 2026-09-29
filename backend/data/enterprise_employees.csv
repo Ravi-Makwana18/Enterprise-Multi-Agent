@@ -1,0 +1,501 @@
+employee_id,first_name,last_name,full_name,email,phone,department,designation,manager_name,location,date_of_joining,employment_type,salary,bonus,annual_ctc,performance_rating,gender,age
+EMP0001,Daksh,Bakshi,Daksh Bakshi,daksh.bakshi@enterprise.com,4332181960,Administration,Chief Executive Officer (CEO),Board of Directors,Hyderabad,2018-10-13,Full-Time,402500.0,177500.0,5007500.0,4.8,Male,62
+EMP0002,Alexander,Chander,Alexander Chander,alexander.chander@enterprise.com,+913890838637,Engineering,Chief Technology Officer (CTO),Daksh Bakshi,Pune,2019-03-24,Full-Time,409000.0,122500.0,5030500.0,4.4,Male,45
+EMP0003,Liam,Ahuja,Liam Ahuja,liam.ahuja@enterprise.com,+916542351161,Finance,Chief Financial Officer (CFO),Daksh Bakshi,Noida,2019-03-28,Full-Time,421600.0,176100.0,5235300.0,4.6,Male,53
+EMP0004,Praneel,Padmanabhan,Praneel Padmanabhan,praneel.padmanabhan@enterprise.com,4078161849,Human Resources,Chief Human Resources Officer (CHRO),Daksh Bakshi,Noida,2019-11-28,Full-Time,395900.0,112800.0,4863600.0,4.4,Male,51
+EMP0005,Radhika,Handa,Radhika Handa,radhika.handa@enterprise.com,1034131647,Legal,Legal Manager,Daksh Bakshi,Delhi,2019-12-06,Full-Time,165300.0,49000.0,2032600.0,4.3,Female,35
+EMP0006,Rajata,Gaba,Rajata Gaba,rajata.gaba@enterprise.com,05341928327,Marketing,Marketing Manager,Daksh Bakshi,Noida,2018-06-11,Full-Time,230400.0,78700.0,2843500.0,4.2,Female,45
+EMP0007,Ranveer,Madan,Ranveer Madan,ranveer.madan@enterprise.com,8350305641,Sales,Sales Manager,Daksh Bakshi,Hyderabad,2022-05-03,Full-Time,255700.0,32300.0,3100700.0,3.9,Male,36
+EMP0008,Hitesh,Murty,Hitesh Murty,hitesh.murty@enterprise.com,+917672423884,Operations,Operations Manager,Daksh Bakshi,Ahmedabad,2021-07-25,Full-Time,280000.0,49000.0,3409000.0,4.6,Male,39
+EMP0009,Upadhriti,Rastogi,Upadhriti Rastogi,upadhriti.rastogi@enterprise.com,03287101226,IT Support,IT Support Manager,Daksh Bakshi,Pune,2021-06-01,Full-Time,203300.0,63500.0,2503100.0,4.3,Female,51
+EMP0010,Azad,Rajan,Azad Rajan,azad.rajan@enterprise.com,09784801845,Customer Service,Customer Service Manager,Daksh Bakshi,Kolkata,2019-03-26,Full-Time,174500.0,49000.0,2143000.0,4.4,Male,35
+EMP0011,Daksh,Memon,Daksh Memon,daksh.memon@enterprise.com,02704828148,Data Science,Data Science Manager,Daksh Bakshi,Noida,2019-07-03,Full-Time,273300.0,70300.0,3349900.0,3.6,Male,52
+EMP0012,Ira,Dua,Ira Dua,ira.dua@enterprise.com,02880957015,Product Management,Group Product Manager,Daksh Bakshi,Ahmedabad,2018-10-20,Full-Time,181900.0,55000.0,2237800.0,3.8,Female,41
+EMP0013,Nikita,Khatri,Nikita Khatri,nikita.khatri@enterprise.com,+913911718227,Procurement,Procurement Manager,Daksh Bakshi,Noida,2020-01-12,Full-Time,262100.0,51400.0,3196600.0,3.8,Female,38
+EMP0014,Gayathri,Lanka,Gayathri Lanka,gayathri.lanka@enterprise.com,9638346578,Security,Security Manager,Daksh Bakshi,Pune,2018-11-10,Full-Time,163600.0,32400.0,1995600.0,4.3,Female,47
+EMP0015,Upkaar,Dara,Upkaar Dara,upkaar.dara@enterprise.com,+913150983930,Research & Development,R&D Manager,Daksh Bakshi,Ahmedabad,2020-12-19,Full-Time,207700.0,59800.0,2552200.0,3.8,Male,51
+EMP0016,Balendra,Bhargava,Balendra Bhargava,balendra.bhargava@enterprise.com,+911051834738,Product Management,Product Operations Specialist,Ira Dua,Bangalore,2026-02-05,Full-Time,35600.0,11500.0,438700.0,4.5,Male,27
+EMP0017,Ekaja,Solanki,Ekaja Solanki,ekaja.solanki@enterprise.com,+917631165667,Customer Service,Client Support Associate,Azad Rajan,Mumbai,2022-03-12,Contract,44900.0,14600.0,553400.0,4.0,Female,32
+EMP0018,Avi,Chaudhari,Avi Chaudhari,avi.chaudhari@enterprise.com,+916513338726,Data Science,Data Scientist,Daksh Memon,Hyderabad,2018-08-26,Full-Time,141500.0,35800.0,1733800.0,3.5,Male,39
+EMP0019,Gavin,Mallick,Gavin Mallick,gavin.mallick@enterprise.com,03178108013,Human Resources,HR Executive,Praneel Padmanabhan,Kolkata,2019-11-08,Contract,68300.0,6900.0,826500.0,3.5,Male,30
+EMP0020,Geetika,Ray,Geetika Ray,geetika.ray@enterprise.com,07360260647,Legal,Legal Intern,Radhika Handa,Ahmedabad,2023-10-21,Intern,23000.0,3700.0,279700.0,4.0,Female,22
+EMP0021,Luke,Sampath,Luke Sampath,luke.sampath@enterprise.com,8723430980,Legal,Senior Legal Counsel,Radhika Handa,Hyderabad,2018-10-04,Full-Time,121200.0,15200.0,1469600.0,4.5,Male,35
+EMP0022,Nirja,Bhandari,Nirja Bhandari,nirja.bhandari@enterprise.com,+919788208121,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Hyderabad,2023-04-22,Full-Time,57000.0,15900.0,699900.0,4.5,Female,25
+EMP0023,Bahadurjit,Keer,Bahadurjit Keer,bahadurjit.keer@enterprise.com,01939909169,Human Resources,Senior Talent Recruiter,Praneel Padmanabhan,Bangalore,2022-07-08,Full-Time,112700.0,33200.0,1385600.0,4.0,Male,41
+EMP0024,Nakul,Lal,Nakul Lal,nakul.lal@enterprise.com,+915346247510,Legal,Senior Compliance Specialist,Radhika Handa,Ahmedabad,2024-03-04,Full-Time,99500.0,21200.0,1215200.0,3.0,Male,33
+EMP0025,Veer,Chaudhry,Veer Chaudhry,veer.chaudhry@enterprise.com,+918384251354,Human Resources,HR Intern,Praneel Padmanabhan,Bangalore,2019-11-06,Intern,23100.0,2900.0,280100.0,3.5,Male,21
+EMP0026,Gaurangi,Sarma,Gaurangi Sarma,gaurangi.sarma@enterprise.com,4980841241,Marketing,Digital Marketing Trainee,Rajata Gaba,Mumbai,2020-02-17,Intern,23500.0,4800.0,286800.0,3.5,Female,22
+EMP0027,Chatresh,Dugal,Chatresh Dugal,chatresh.dugal@enterprise.com,04935348740,Data Science,Data Analyst,Daksh Memon,Bangalore,2023-09-12,Full-Time,32500.0,12200.0,402200.0,3.0,Male,22
+EMP0028,Chakradhar,Sampath,Chakradhar Sampath,chakradhar.sampath@enterprise.com,00052427868,Human Resources,Payroll Executive,Praneel Padmanabhan,Bangalore,2024-12-11,Full-Time,36000.0,18400.0,450400.0,3.0,Male,28
+EMP0029,Aarna,Choudhury,Aarna Choudhury,aarna.choudhury@enterprise.com,+912805982620,Research & Development,Principal Innovator,Upkaar Dara,Ahmedabad,2021-07-19,Full-Time,98600.0,18300.0,1201500.0,4.5,Female,35
+EMP0030,Mitesh,Patla,Mitesh Patla,mitesh.patla@enterprise.com,+915331586923,Engineering,Software Engineer,Alexander Chander,Pune,2020-09-27,Full-Time,55300.0,7000.0,670600.0,3.5,Male,25
+EMP0031,Finn,Goel,Finn Goel,finn.goel@enterprise.com,00256342160,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Pune,2019-07-05,Full-Time,56400.0,15000.0,691800.0,3.5,Male,32
+EMP0032,Wahab,Kapadia,Wahab Kapadia,wahab.kapadia@enterprise.com,+917543303654,Procurement,Buyer,Nikita Khatri,Kolkata,2023-06-25,Full-Time,65900.0,8100.0,798900.0,3.5,Male,25
+EMP0033,Bakhshi,Mallick,Bakhshi Mallick,bakhshi.mallick@enterprise.com,08685014294,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Mumbai,2026-04-25,Full-Time,68600.0,14600.0,837800.0,3.5,Male,27
+EMP0034,Anjali,Chopra,Anjali Chopra,anjali.chopra@enterprise.com,6556981693,Customer Service,Senior Support Specialist,Azad Rajan,Noida,2019-06-07,Contract,118200.0,35900.0,1454300.0,3.0,Female,32
+EMP0035,Lakshmi,Basu,Lakshmi Basu,lakshmi.basu@enterprise.com,6088356159,Research & Development,R&D Intern,Upkaar Dara,Delhi,2024-04-12,Intern,19200.0,2000.0,232400.0,4.5,Female,22
+EMP0036,Nirja,Dash,Nirja Dash,nirja.dash@enterprise.com,4846564823,Data Science,Data Analyst,Daksh Memon,Noida,2025-07-06,Full-Time,74100.0,5400.0,894600.0,4.5,Female,24
+EMP0037,Shivansh,Raghavan,Shivansh Raghavan,shivansh.raghavan@enterprise.com,2994680443,Marketing,Growth Marketing Lead,Rajata Gaba,Delhi,2021-06-04,Full-Time,140100.0,20600.0,1701800.0,4.5,Male,29
+EMP0038,Tanveer,Nagy,Tanveer Nagy,tanveer.nagy@enterprise.com,07738721489,Legal,Senior Legal Counsel,Radhika Handa,Delhi,2025-03-12,Full-Time,140500.0,39200.0,1725200.0,4.0,Male,36
+EMP0039,Oviya,Chander,Oviya Chander,oviya.chander@enterprise.com,+914332003791,Engineering,Tech Lead,Alexander Chander,Delhi,2022-11-23,Full-Time,82700.0,29900.0,1022300.0,4.0,Female,36
+EMP0040,Vedant,Sachdeva,Vedant Sachdeva,vedant.sachdeva@enterprise.com,9367632016,Operations,Operations Intern,Hitesh Murty,Delhi,2022-11-02,Intern,15900.0,2700.0,193500.0,3.0,Male,22
+EMP0041,Januja,Goda,Januja Goda,januja.goda@enterprise.com,8708317278,Data Science,Data Scientist,Daksh Memon,Noida,2025-10-26,Full-Time,115500.0,31700.0,1417700.0,3.5,Female,37
+EMP0042,Nathan,Savant,Nathan Savant,nathan.savant@enterprise.com,8687277434,Legal,Compliance Analyst,Radhika Handa,Chennai,2021-03-21,Full-Time,60800.0,9500.0,739100.0,3.5,Male,24
+EMP0043,Yoshita,Sundaram,Yoshita Sundaram,yoshita.sundaram@enterprise.com,3471434558,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Pune,2021-03-08,Full-Time,69700.0,19400.0,855800.0,4.0,Female,29
+EMP0044,Chaitaly,Devi,Chaitaly Devi,chaitaly.devi@enterprise.com,+913623166587,Human Resources,HR Executive,Praneel Padmanabhan,Hyderabad,2023-05-01,Full-Time,70300.0,7200.0,850800.0,4.0,Female,25
+EMP0045,Sarthak,Bhatia,Sarthak Bhatia,sarthak.bhatia@enterprise.com,+916690967054,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Pune,2026-09-24,Full-Time,54700.0,8700.0,665100.0,3.5,Male,28
+EMP0046,Robert,Saini,Robert Saini,robert.saini@enterprise.com,8937346706,Administration,Admin Intern,Daksh Bakshi,Ahmedabad,2019-07-01,Intern,26100.0,4700.0,317900.0,4.5,Male,20
+EMP0047,Pahal,Ravel,Pahal Ravel,pahal.ravel@enterprise.com,2729806990,Administration,Admin Intern,Daksh Bakshi,Ahmedabad,2020-11-27,Intern,23900.0,1600.0,288400.0,4.0,Female,24
+EMP0048,Chakrika,Sangha,Chakrika Sangha,chakrika.sangha@enterprise.com,+917204653755,Administration,Facilities Officer,Daksh Bakshi,Chennai,2021-10-07,Full-Time,52000.0,15700.0,639700.0,3.5,Female,26
+EMP0049,Ranveer,Mall,Ranveer Mall,ranveer.mall@enterprise.com,04170805310,Finance,Senior Auditor,Liam Ahuja,Noida,2018-09-13,Full-Time,84500.0,25200.0,1039200.0,3.5,Male,34
+EMP0050,Amruta,Kota,Amruta Kota,amruta.kota@enterprise.com,+910923271937,Operations,Operations Intern,Hitesh Murty,Chennai,2026-06-14,Intern,22600.0,1000.0,272200.0,3.5,Female,24
+EMP0051,Lavanya,Pillay,Lavanya Pillay,lavanya.pillay@enterprise.com,+919912419049,Customer Service,Client Support Associate,Azad Rajan,Bangalore,2022-05-12,Full-Time,54400.0,9100.0,661900.0,3.5,Female,25
+EMP0052,Riya,Ranganathan,Riya Ranganathan,riya.ranganathan@enterprise.com,3193149190,Procurement,Sourcing Lead,Nikita Khatri,Pune,2025-03-17,Contract,143500.0,29800.0,1751800.0,3.5,Female,28
+EMP0053,Prisha,Walia,Prisha Walia,prisha.walia@enterprise.com,05185067165,Finance,Senior Auditor,Liam Ahuja,Chennai,2026-06-08,Full-Time,102900.0,34000.0,1268800.0,5.0,Female,42
+EMP0054,Veda,Dua,Veda Dua,veda.dua@enterprise.com,02849877694,Marketing,Social Media Executive,Rajata Gaba,Pune,2025-04-23,Full-Time,32600.0,19300.0,410500.0,3.0,Female,30
+EMP0055,Neel,Korpal,Neel Korpal,neel.korpal@enterprise.com,+914737996507,Legal,Senior Legal Counsel,Radhika Handa,Ahmedabad,2025-11-05,Full-Time,88800.0,31700.0,1097300.0,3.5,Male,35
+EMP0056,Omaja,Gopal,Omaja Gopal,omaja.gopal@enterprise.com,03545494808,Finance,Tax Analyst,Liam Ahuja,Chennai,2024-06-16,Full-Time,78200.0,6600.0,945000.0,4.0,Female,24
+EMP0057,Ikshita,Chada,Ikshita Chada,ikshita.chada@enterprise.com,+916783777014,Operations,Operations Intern,Hitesh Murty,Pune,2025-10-26,Intern,26800.0,4300.0,325900.0,4.0,Female,20
+EMP0058,Indrajit,Ravel,Indrajit Ravel,indrajit.ravel@enterprise.com,3495788568,Administration,Admin Intern,Daksh Bakshi,Kolkata,2025-04-06,Intern,25700.0,3600.0,312000.0,3.5,Male,22
+EMP0059,Oni,Pandey,Oni Pandey,oni.pandey@enterprise.com,7444313518,Security,Information Security Officer,Gayathri Lanka,Noida,2019-12-23,Contract,74600.0,11900.0,907100.0,4.0,Female,32
+EMP0060,Hiral,Handa,Hiral Handa,hiral.handa@enterprise.com,+917498941343,Data Science,Associate Data Scientist,Daksh Memon,Delhi,2020-10-02,Full-Time,51800.0,16000.0,637600.0,4.5,Female,29
+EMP0061,Pranit,Gola,Pranit Gola,pranit.gola@enterprise.com,00824008427,Marketing,Marketing Intern,Rajata Gaba,Bangalore,2023-07-18,Intern,26400.0,3700.0,320500.0,4.5,Male,23
+EMP0062,Charan,Arora,Charan Arora,charan.arora@enterprise.com,4777520471,IT Support,Network Infrastructure Lead,Upadhriti Rastogi,Pune,2020-09-15,Full-Time,118900.0,27900.0,1454700.0,4.0,Male,36
+EMP0063,Bhavini,Rattan,Bhavini Rattan,bhavini.rattan@enterprise.com,01902294131,Customer Service,Client Support Associate,Azad Rajan,Hyderabad,2022-07-15,Full-Time,52400.0,5300.0,634100.0,4.0,Female,29
+EMP0064,Turvi,Kara,Turvi Kara,turvi.kara@enterprise.com,6774964990,Product Management,Product Operations Specialist,Ira Dua,Delhi,2025-11-18,Full-Time,51300.0,16200.0,631800.0,4.0,Female,27
+EMP0065,Chavvi,Johal,Chavvi Johal,chavvi.johal@enterprise.com,3412328120,Marketing,Growth Marketing Lead,Rajata Gaba,Hyderabad,2020-06-05,Full-Time,132000.0,38800.0,1622800.0,4.0,Female,31
+EMP0066,Tara,Seshadri,Tara Seshadri,tara.seshadri@enterprise.com,9740344713,Procurement,Vendor Relations Associate,Nikita Khatri,Mumbai,2021-05-23,Full-Time,71600.0,9400.0,868600.0,3.0,Female,23
+EMP0067,Kevin,Hora,Kevin Hora,kevin.hora@enterprise.com,01832421024,Marketing,Senior Marketing Strategist,Rajata Gaba,Bangalore,2024-06-09,Full-Time,124700.0,33800.0,1530200.0,3.5,Male,32
+EMP0068,Mitali,Sarna,Mitali Sarna,mitali.sarna@enterprise.com,+917464887719,IT Support,Senior Systems Engineer,Upadhriti Rastogi,Pune,2024-06-21,Full-Time,88000.0,16600.0,1072600.0,4.0,Female,43
+EMP0069,Anmol,Sankaran,Anmol Sankaran,anmol.sankaran@enterprise.com,5940139904,Finance,Financial Planning Lead,Liam Ahuja,Hyderabad,2026-09-13,Contract,149600.0,18000.0,1813200.0,4.0,Male,30
+EMP0070,Anusha,Gill,Anusha Gill,anusha.gill@enterprise.com,08742967175,Research & Development,Innovation Engineer,Upkaar Dara,Hyderabad,2025-01-06,Contract,58400.0,5900.0,706700.0,3.5,Female,26
+EMP0071,Samarth,Nath,Samarth Nath,samarth.nath@enterprise.com,01256746807,Finance,Financial Planning Lead,Liam Ahuja,Chennai,2018-05-14,Full-Time,108600.0,32200.0,1335400.0,3.5,Male,28
+EMP0072,Chanchal,Murty,Chanchal Murty,chanchal.murty@enterprise.com,05168087603,Procurement,Procurement Intern,Nikita Khatri,Noida,2019-04-16,Intern,33500.0,4200.0,406200.0,4.0,Female,21
+EMP0073,Pratyush,Tara,Pratyush Tara,pratyush.tara@enterprise.com,7034824771,Research & Development,Senior Research Scientist,Upkaar Dara,Ahmedabad,2019-05-25,Full-Time,135500.0,29900.0,1655900.0,4.0,Male,33
+EMP0074,Amrita,Khatri,Amrita Khatri,amrita.khatri@enterprise.com,2480861317,Procurement,Buyer,Nikita Khatri,Delhi,2024-10-08,Full-Time,51900.0,14000.0,636800.0,3.5,Female,29
+EMP0075,Daniel,Dube,Daniel Dube,daniel.dube@enterprise.com,04846773782,Legal,Legal Intern,Radhika Handa,Ahmedabad,2023-10-27,Intern,26500.0,4100.0,322100.0,4.0,Male,22
+EMP0076,Sanaya,Halder,Sanaya Halder,sanaya.halder@enterprise.com,8214658404,Finance,Accounts Trainee,Liam Ahuja,Delhi,2021-08-08,Intern,34400.0,2900.0,415700.0,4.0,Female,23
+EMP0077,Manthan,Suri,Manthan Suri,manthan.suri@enterprise.com,+917875588675,Sales,Business Development Representative,Ranveer Madan,Pune,2021-07-12,Full-Time,70700.0,13300.0,861700.0,3.5,Male,28
+EMP0078,Girindra,Khare,Girindra Khare,girindra.khare@enterprise.com,6360576627,Administration,Office Coordinator,Daksh Bakshi,Bangalore,2020-02-08,Full-Time,62900.0,13100.0,767900.0,4.0,Male,22
+EMP0079,Anita,Date,Anita Date,anita.date@enterprise.com,9517187026,Product Management,Associate Product Manager,Ira Dua,Pune,2018-04-29,Full-Time,36600.0,9300.0,448500.0,5.0,Female,30
+EMP0080,Faras,Borde,Faras Borde,faras.borde@enterprise.com,04596158657,Procurement,Category Specialist,Nikita Khatri,Ahmedabad,2019-04-27,Full-Time,86500.0,39800.0,1077800.0,4.0,Male,41
+EMP0081,Andrew,Biswas,Andrew Biswas,andrew.biswas@enterprise.com,+914316117240,IT Support,Helpdesk Trainee,Upadhriti Rastogi,Ahmedabad,2020-09-25,Intern,29100.0,2700.0,351900.0,4.0,Male,24
+EMP0082,Arin,Nair,Arin Nair,arin.nair@enterprise.com,+914556238692,Operations,Supply Chain Lead,Hitesh Murty,Delhi,2023-09-11,Full-Time,140500.0,21900.0,1707900.0,3.5,Male,32
+EMP0083,Frederick,Gill,Frederick Gill,frederick.gill@enterprise.com,+919693792374,Marketing,Social Media Executive,Rajata Gaba,Ahmedabad,2021-08-11,Full-Time,56900.0,10200.0,693000.0,4.5,Male,29
+EMP0084,Victor,Kumer,Victor Kumer,victor.kumer@enterprise.com,0748217594,Data Science,BI Developer,Daksh Memon,Mumbai,2023-07-22,Full-Time,65300.0,17200.0,800800.0,5.0,Male,29
+EMP0085,Simon,Krishna,Simon Krishna,simon.krishna@enterprise.com,04367136959,Customer Service,Customer Service Trainee,Azad Rajan,Bangalore,2026-02-07,Intern,32500.0,2800.0,392800.0,3.0,Male,20
+EMP0086,Manbir,Merchant,Manbir Merchant,manbir.merchant@enterprise.com,+916409097439,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Delhi,2025-01-11,Full-Time,62500.0,17800.0,767800.0,4.0,Male,28
+EMP0087,Qushi,Kanda,Qushi Kanda,qushi.kanda@enterprise.com,3942104709,Security,Cybersecurity Associate,Gayathri Lanka,Pune,2022-11-13,Full-Time,64200.0,9300.0,779700.0,5.0,Female,32
+EMP0088,Qabil,Deep,Qabil Deep,qabil.deep@enterprise.com,+914562328588,IT Support,Network Infrastructure Lead,Upadhriti Rastogi,Delhi,2022-10-31,Contract,102700.0,16400.0,1248800.0,3.0,Male,29
+EMP0089,Madhavi,Gala,Madhavi Gala,madhavi.gala@enterprise.com,07451712368,Data Science,Data Analyst,Daksh Memon,Ahmedabad,2024-07-16,Full-Time,60500.0,10700.0,736700.0,3.0,Female,23
+EMP0090,Rajeshri,Chana,Rajeshri Chana,rajeshri.chana@enterprise.com,00481754965,Product Management,Senior Product Manager,Ira Dua,Pune,2022-12-15,Full-Time,143100.0,31900.0,1749100.0,4.5,Female,42
+EMP0091,Darika,Kaur,Darika Kaur,darika.kaur@enterprise.com,00985931746,Product Management,Product Intern,Ira Dua,Ahmedabad,2019-03-13,Intern,31900.0,1800.0,384600.0,3.5,Female,23
+EMP0092,Devika,Dey,Devika Dey,devika.dey@enterprise.com,+910471138267,Data Science,Senior Data Engineer,Daksh Memon,Ahmedabad,2021-03-18,Full-Time,99200.0,29100.0,1219500.0,4.0,Female,40
+EMP0093,Qasim,Zachariah,Qasim Zachariah,qasim.zachariah@enterprise.com,09261796405,Data Science,Data Analyst,Daksh Memon,Pune,2025-01-14,Full-Time,42500.0,16300.0,526300.0,4.0,Male,31
+EMP0094,Janani,Sawhney,Janani Sawhney,janani.sawhney@enterprise.com,03515850643,Administration,Office Coordinator,Daksh Bakshi,Mumbai,2020-04-02,Full-Time,34500.0,9400.0,423400.0,3.0,Female,24
+EMP0095,Divya,Sha,Divya Sha,divya.sha@enterprise.com,+913900532931,Customer Service,Customer Support Specialist,Azad Rajan,Delhi,2019-04-17,Full-Time,75700.0,19200.0,927600.0,4.0,Female,26
+EMP0096,Hemang,Kalita,Hemang Kalita,hemang.kalita@enterprise.com,+915290422842,Finance,Financial Analyst,Liam Ahuja,Pune,2022-06-05,Full-Time,79000.0,19500.0,967500.0,3.0,Male,32
+EMP0097,Christopher,Bal,Christopher Bal,christopher.bal@enterprise.com,+910539502402,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Pune,2025-07-27,Full-Time,49100.0,14600.0,603800.0,3.5,Male,31
+EMP0098,Shivansh,Vora,Shivansh Vora,shivansh.vora@enterprise.com,+911775891783,Data Science,Data Analytics Trainee,Daksh Memon,Chennai,2025-04-13,Intern,19400.0,1300.0,234100.0,3.5,Male,24
+EMP0099,Anthony,Verma,Anthony Verma,anthony.verma@enterprise.com,07007661771,Engineering,QA Intern,Alexander Chander,Noida,2023-02-02,Intern,17300.0,1900.0,209500.0,3.5,Male,23
+EMP0100,Chaitaly,Nagy,Chaitaly Nagy,chaitaly.nagy@enterprise.com,2124998569,Data Science,Data Analyst,Daksh Memon,Chennai,2018-05-15,Contract,35000.0,12300.0,432300.0,4.0,Female,32
+EMP0101,Manan,Setty,Manan Setty,manan.setty@enterprise.com,9611836736,IT Support,IT Support Specialist,Upadhriti Rastogi,Bangalore,2022-06-19,Full-Time,79000.0,10500.0,958500.0,3.5,Male,23
+EMP0102,Omkaar,Setty,Omkaar Setty,omkaar.setty@enterprise.com,06156545271,Security,Security Analyst,Gayathri Lanka,Delhi,2020-09-24,Full-Time,62000.0,19600.0,763600.0,5.0,Male,32
+EMP0103,Chakradev,Chada,Chakradev Chada,chakradev.chada@enterprise.com,+916152809885,Human Resources,Payroll Executive,Praneel Padmanabhan,Bangalore,2021-02-09,Full-Time,70700.0,8500.0,856900.0,4.5,Male,25
+EMP0104,Darsh,Roy,Darsh Roy,darsh.roy@enterprise.com,06049451983,Finance,Financial Analyst,Liam Ahuja,Delhi,2018-03-06,Full-Time,36600.0,10400.0,449600.0,3.5,Male,22
+EMP0105,Faras,Subramaniam,Faras Subramaniam,faras.subramaniam@enterprise.com,+911585149368,Finance,Tax Analyst,Liam Ahuja,Ahmedabad,2023-08-26,Full-Time,53800.0,16700.0,662300.0,3.5,Male,23
+EMP0106,Agastya,Loke,Agastya Loke,agastya.loke@enterprise.com,+912445502296,Procurement,Vendor Relations Associate,Nikita Khatri,Noida,2022-10-13,Full-Time,62200.0,5500.0,751900.0,4.0,Male,29
+EMP0107,Bhavya,Dhar,Bhavya Dhar,bhavya.dhar@enterprise.com,0183667525,Procurement,Procurement Intern,Nikita Khatri,Chennai,2025-01-01,Intern,21400.0,1600.0,258400.0,4.0,Female,20
+EMP0108,Nimrat,Nair,Nimrat Nair,nimrat.nair@enterprise.com,9102290147,Operations,Operations Intern,Hitesh Murty,Kolkata,2026-01-31,Intern,25100.0,2700.0,303900.0,4.5,Female,23
+EMP0109,Unnati,Sunder,Unnati Sunder,unnati.sunder@enterprise.com,7643815614,IT Support,Helpdesk Trainee,Upadhriti Rastogi,Delhi,2022-10-15,Intern,31500.0,2600.0,380600.0,3.5,Female,22
+EMP0110,Widisha,Vyas,Widisha Vyas,widisha.vyas@enterprise.com,4036900343,Sales,Business Development Trainee,Ranveer Madan,Pune,2026-05-08,Intern,16800.0,1300.0,202900.0,4.0,Female,20
+EMP0111,Ekapad,Kumer,Ekapad Kumer,ekapad.kumer@enterprise.com,05107622683,Customer Service,Escalation Specialist,Azad Rajan,Bangalore,2021-03-24,Full-Time,108800.0,36800.0,1342400.0,4.0,Male,31
+EMP0112,Yamini,Pandya,Yamini Pandya,yamini.pandya@enterprise.com,+916060715969,Human Resources,HR Executive,Praneel Padmanabhan,Pune,2026-07-21,Full-Time,41200.0,6600.0,501000.0,3.5,Female,29
+EMP0113,Samaksh,Sahni,Samaksh Sahni,samaksh.sahni@enterprise.com,01605297516,Administration,Office Coordinator,Daksh Bakshi,Chennai,2018-04-29,Contract,60700.0,14600.0,743000.0,3.5,Male,31
+EMP0114,Damyanti,Kohli,Damyanti Kohli,damyanti.kohli@enterprise.com,09681645352,Research & Development,Senior Research Scientist,Upkaar Dara,Bangalore,2019-01-11,Full-Time,119600.0,25000.0,1460200.0,4.0,Female,32
+EMP0115,Balvan,Uppal,Balvan Uppal,balvan.uppal@enterprise.com,1883552312,Operations,Supply Chain Analyst,Hitesh Murty,Bangalore,2019-09-30,Full-Time,66100.0,16700.0,809900.0,3.5,Male,26
+EMP0116,Kabir,Hora,Kabir Hora,kabir.hora@enterprise.com,+919212779979,Product Management,Senior Product Manager,Ira Dua,Kolkata,2019-04-12,Full-Time,122500.0,25400.0,1495400.0,3.5,Male,43
+EMP0117,Neel,Mutti,Neel Mutti,neel.mutti@enterprise.com,+917177449058,Marketing,Social Media Executive,Rajata Gaba,Bangalore,2020-04-17,Full-Time,32300.0,10900.0,398500.0,3.5,Male,26
+EMP0118,Balhaar,Mukherjee,Balhaar Mukherjee,balhaar.mukherjee@enterprise.com,07005411998,Administration,Facilities Lead,Daksh Bakshi,Mumbai,2022-04-07,Full-Time,80500.0,33700.0,999700.0,4.0,Male,31
+EMP0119,Rehaan,Shere,Rehaan Shere,rehaan.shere@enterprise.com,8079359782,Customer Service,Client Support Associate,Azad Rajan,Bangalore,2023-02-27,Full-Time,49900.0,16100.0,614900.0,4.5,Male,23
+EMP0120,Bhavani,Seshadri,Bhavani Seshadri,bhavani.seshadri@enterprise.com,+915182037788,Data Science,BI Developer,Daksh Memon,Mumbai,2024-12-06,Full-Time,44500.0,11100.0,545100.0,4.0,Female,28
+EMP0121,Gauri,Patla,Gauri Patla,gauri.patla@enterprise.com,04665905151,Human Resources,HR Executive,Praneel Padmanabhan,Delhi,2020-06-26,Full-Time,50000.0,6200.0,606200.0,3.5,Female,31
+EMP0122,Reyansh,Mander,Reyansh Mander,reyansh.mander@enterprise.com,09251925462,Human Resources,HR Executive,Praneel Padmanabhan,Hyderabad,2019-02-26,Full-Time,75300.0,10200.0,913800.0,3.0,Male,25
+EMP0123,Brijesh,Mukherjee,Brijesh Mukherjee,brijesh.mukherjee@enterprise.com,6528168505,Finance,Tax Analyst,Liam Ahuja,Delhi,2025-01-13,Full-Time,54700.0,16300.0,672700.0,3.5,Male,32
+EMP0124,Nilima,Gole,Nilima Gole,nilima.gole@enterprise.com,+915733221418,Human Resources,Payroll Executive,Praneel Padmanabhan,Chennai,2023-03-07,Full-Time,59600.0,10300.0,725500.0,4.0,Female,26
+EMP0125,Anirudh,Nayar,Anirudh Nayar,anirudh.nayar@enterprise.com,2962229270,Sales,Sales Executive,Ranveer Madan,Kolkata,2026-04-15,Full-Time,60800.0,12600.0,742200.0,4.5,Male,23
+EMP0126,Tripti,Patla,Tripti Patla,tripti.patla@enterprise.com,3794738347,Research & Development,Innovation Engineer,Upkaar Dara,Ahmedabad,2019-02-28,Full-Time,53800.0,7300.0,652900.0,4.5,Female,31
+EMP0127,Indali,Pillai,Indali Pillai,indali.pillai@enterprise.com,9774688623,Procurement,Category Specialist,Nikita Khatri,Delhi,2022-03-08,Full-Time,129500.0,39800.0,1593800.0,4.5,Female,35
+EMP0128,Ekantika,Krishna,Ekantika Krishna,ekantika.krishna@enterprise.com,+917581814124,Operations,Logistics Coordinator,Hitesh Murty,Kolkata,2025-08-10,Full-Time,62400.0,6000.0,754800.0,3.5,Female,32
+EMP0129,Varenya,Varghese,Varenya Varghese,varenya.varghese@enterprise.com,+916137506068,Procurement,Procurement Intern,Nikita Khatri,Chennai,2025-05-11,Intern,16600.0,3700.0,202900.0,4.0,Female,22
+EMP0130,Ridhi,Keer,Ridhi Keer,ridhi.keer@enterprise.com,01530515220,Finance,Financial Analyst,Liam Ahuja,Kolkata,2019-01-18,Full-Time,62200.0,9900.0,756300.0,4.0,Female,28
+EMP0131,Mekhala,Sodhi,Mekhala Sodhi,mekhala.sodhi@enterprise.com,2779010432,Customer Service,Customer Support Specialist,Azad Rajan,Hyderabad,2019-07-18,Full-Time,47100.0,16500.0,581700.0,3.5,Female,25
+EMP0132,Zarna,Sampath,Zarna Sampath,zarna.sampath@enterprise.com,+914341036971,Security,Cybersecurity Associate,Gayathri Lanka,Noida,2019-09-24,Full-Time,31900.0,10100.0,392900.0,3.5,Female,30
+EMP0133,Christopher,Tata,Christopher Tata,christopher.tata@enterprise.com,8089324609,Procurement,Buyer,Nikita Khatri,Hyderabad,2023-12-28,Full-Time,78500.0,14200.0,956200.0,3.5,Male,25
+EMP0134,Qushi,Khosla,Qushi Khosla,qushi.khosla@enterprise.com,6218518888,Research & Development,Lab Specialist,Upkaar Dara,Noida,2023-08-22,Full-Time,79200.0,11900.0,962300.0,4.0,Female,31
+EMP0135,Advaith,Ramakrishnan,Advaith Ramakrishnan,advaith.ramakrishnan@enterprise.com,00654051531,Security,Cloud Security Lead,Gayathri Lanka,Kolkata,2019-02-25,Full-Time,83700.0,27000.0,1031400.0,4.0,Male,36
+EMP0136,Ojas,Deol,Ojas Deol,ojas.deol@enterprise.com,+915852772217,Marketing,Senior Marketing Strategist,Rajata Gaba,Ahmedabad,2021-12-02,Full-Time,90300.0,25900.0,1109500.0,4.5,Male,44
+EMP0137,Anita,Memon,Anita Memon,anita.memon@enterprise.com,+910305486874,Engineering,DevOps Engineer,Alexander Chander,Delhi,2019-08-22,Full-Time,48700.0,5400.0,589800.0,3.0,Female,23
+EMP0138,Anita,Halder,Anita Halder,anita.halder@enterprise.com,05054156676,Research & Development,Innovation Engineer,Upkaar Dara,Bangalore,2020-11-14,Full-Time,52400.0,5100.0,633900.0,3.5,Female,29
+EMP0139,Omkaar,Grover,Omkaar Grover,omkaar.grover@enterprise.com,07584161692,Customer Service,Customer Service Trainee,Azad Rajan,Bangalore,2020-09-03,Intern,30500.0,2000.0,368000.0,3.5,Male,20
+EMP0140,Nandini,Nagi,Nandini Nagi,nandini.nagi@enterprise.com,+911544796275,Human Resources,Senior Talent Recruiter,Praneel Padmanabhan,Chennai,2022-10-25,Full-Time,124200.0,29400.0,1519800.0,3.0,Female,28
+EMP0141,Vansha,Basak,Vansha Basak,vansha.basak@enterprise.com,5964016582,Legal,Legal Associate,Radhika Handa,Noida,2023-04-10,Full-Time,56200.0,10400.0,684800.0,3.0,Female,23
+EMP0142,Amruta,Dhar,Amruta Dhar,amruta.dhar@enterprise.com,7021355690,Sales,Senior Account Executive,Ranveer Madan,Delhi,2019-07-01,Full-Time,104100.0,33300.0,1282500.0,3.0,Female,30
+EMP0143,Ganga,Sengupta,Ganga Sengupta,ganga.sengupta@enterprise.com,05719285654,Security,Cybersecurity Associate,Gayathri Lanka,Ahmedabad,2018-06-01,Full-Time,61600.0,17200.0,756400.0,3.5,Female,29
+EMP0144,Jeet,Comar,Jeet Comar,jeet.comar@enterprise.com,+912786814473,Administration,Senior Admin Coordinator,Daksh Bakshi,Chennai,2018-05-30,Full-Time,116100.0,39700.0,1432900.0,4.0,Male,37
+EMP0145,Luke,Swaminathan,Luke Swaminathan,luke.swaminathan@enterprise.com,+911217271551,Marketing,Marketing Executive,Rajata Gaba,Noida,2026-05-03,Full-Time,43700.0,17000.0,541400.0,3.5,Male,27
+EMP0146,Mohini,Mital,Mohini Mital,mohini.mital@enterprise.com,+912583132370,Sales,Business Development Trainee,Ranveer Madan,Pune,2026-02-26,Intern,22300.0,4200.0,271800.0,3.5,Female,23
+EMP0147,Radha,Pillay,Radha Pillay,radha.pillay@enterprise.com,08291146786,Data Science,Data Science Intern,Daksh Memon,Chennai,2021-06-09,Intern,20900.0,1400.0,252200.0,3.5,Female,24
+EMP0148,Tara,Borah,Tara Borah,tara.borah@enterprise.com,+915177852892,Finance,Accounts Executive,Liam Ahuja,Pune,2025-07-12,Full-Time,60700.0,11500.0,739900.0,4.0,Female,27
+EMP0149,Eiravati,Sant,Eiravati Sant,eiravati.sant@enterprise.com,0182422535,Customer Service,Client Support Associate,Azad Rajan,Bangalore,2019-06-02,Full-Time,37100.0,14100.0,459300.0,3.0,Female,22
+EMP0150,Yochana,Mander,Yochana Mander,yochana.mander@enterprise.com,+914384249818,Sales,Inside Sales Associate,Ranveer Madan,Ahmedabad,2026-07-23,Full-Time,64000.0,19200.0,787200.0,3.0,Female,24
+EMP0151,Frado,Dube,Frado Dube,frado.dube@enterprise.com,+919959001094,Customer Service,Customer Support Specialist,Azad Rajan,Ahmedabad,2023-10-22,Full-Time,78000.0,5400.0,941400.0,3.5,Male,25
+EMP0152,Henry,Saha,Henry Saha,henry.saha@enterprise.com,0784473647,Marketing,Social Media Executive,Rajata Gaba,Hyderabad,2019-05-18,Full-Time,44300.0,18700.0,550300.0,3.0,Male,31
+EMP0153,Balhaar,Bhasin,Balhaar Bhasin,balhaar.bhasin@enterprise.com,+917677359255,IT Support,Cloud Support Lead,Upadhriti Rastogi,Delhi,2025-12-16,Full-Time,136700.0,39200.0,1679600.0,3.0,Male,30
+EMP0154,Pooja,Rastogi,Pooja Rastogi,pooja.rastogi@enterprise.com,+915881537147,Research & Development,Senior Research Scientist,Upkaar Dara,Hyderabad,2019-07-23,Full-Time,135600.0,27700.0,1654900.0,3.5,Female,33
+EMP0155,Krishna,Dhaliwal,Krishna Dhaliwal,krishna.dhaliwal@enterprise.com,+910469632595,Engineering,DevOps Engineer,Alexander Chander,Chennai,2022-06-19,Full-Time,36500.0,18300.0,456300.0,5.0,Female,30
+EMP0156,Ikshita,Dutta,Ikshita Dutta,ikshita.dutta@enterprise.com,08774701687,Customer Service,Customer Support Specialist,Azad Rajan,Ahmedabad,2023-03-24,Full-Time,36300.0,9800.0,445400.0,4.0,Female,23
+EMP0157,Kavya,Kale,Kavya Kale,kavya.kale@enterprise.com,5004797480,Finance,Finance Intern,Liam Ahuja,Pune,2023-10-24,Intern,23700.0,4600.0,289000.0,3.5,Female,21
+EMP0158,Chatura,Sankar,Chatura Sankar,chatura.sankar@enterprise.com,+914565060983,Finance,Financial Planning Lead,Liam Ahuja,Hyderabad,2025-02-14,Full-Time,142600.0,36100.0,1747300.0,5.0,Male,44
+EMP0159,Radhika,Mani,Radhika Mani,radhika.mani@enterprise.com,+916878499121,Finance,Tax Analyst,Liam Ahuja,Mumbai,2025-05-22,Full-Time,62000.0,13900.0,757900.0,4.0,Female,30
+EMP0160,Shravya,Prakash,Shravya Prakash,shravya.prakash@enterprise.com,08523986800,Security,Security Intern,Gayathri Lanka,Hyderabad,2026-08-08,Intern,16600.0,4800.0,204000.0,4.0,Female,20
+EMP0161,Anirudh,Devan,Anirudh Devan,anirudh.devan@enterprise.com,5787298259,IT Support,Helpdesk Trainee,Upadhriti Rastogi,Chennai,2023-02-01,Intern,24700.0,4200.0,300600.0,3.0,Male,22
+EMP0162,Nathaniel,Gaba,Nathaniel Gaba,nathaniel.gaba@enterprise.com,09495888794,Finance,Accounts Executive,Liam Ahuja,Delhi,2022-06-22,Full-Time,60300.0,9700.0,733300.0,3.0,Male,27
+EMP0163,Vyanjana,Badal,Vyanjana Badal,vyanjana.badal@enterprise.com,05169409749,Customer Service,Customer Support Specialist,Azad Rajan,Bangalore,2021-04-03,Full-Time,43400.0,8700.0,529500.0,4.5,Female,23
+EMP0164,Jhalak,Behl,Jhalak Behl,jhalak.behl@enterprise.com,7289623091,Legal,Legal Intern,Radhika Handa,Mumbai,2023-08-03,Intern,33700.0,3900.0,408300.0,5.0,Female,22
+EMP0165,Ikshita,Bahl,Ikshita Bahl,ikshita.bahl@enterprise.com,05626368970,IT Support,Helpdesk Trainee,Upadhriti Rastogi,Hyderabad,2020-05-31,Intern,16800.0,2600.0,204200.0,4.0,Female,20
+EMP0166,Ekapad,Venkataraman,Ekapad Venkataraman,ekapad.venkataraman@enterprise.com,+918578652785,Engineering,Backend Lead,Alexander Chander,Delhi,2026-07-26,Full-Time,139300.0,25800.0,1697400.0,3.5,Male,28
+EMP0167,Peter,Lalla,Peter Lalla,peter.lalla@enterprise.com,7334843443,Operations,Supply Chain Lead,Hitesh Murty,Pune,2019-06-12,Full-Time,85100.0,27600.0,1048800.0,5.0,Male,37
+EMP0168,Wishi,Nadig,Wishi Nadig,wishi.nadig@enterprise.com,05844198665,Sales,Business Development Representative,Ranveer Madan,Kolkata,2018-06-14,Full-Time,67700.0,8000.0,820400.0,3.0,Female,27
+EMP0169,Elijah,Mannan,Elijah Mannan,elijah.mannan@enterprise.com,+914157473384,Procurement,Sourcing Lead,Nikita Khatri,Delhi,2019-10-28,Full-Time,122400.0,27900.0,1496700.0,3.5,Male,32
+EMP0170,Madhavi,Devan,Madhavi Devan,madhavi.devan@enterprise.com,+919933083301,Data Science,AI Research Scientist,Daksh Memon,Pune,2022-09-03,Full-Time,113200.0,15400.0,1373800.0,4.0,Female,37
+EMP0171,Samuel,Narayanan,Samuel Narayanan,samuel.narayanan@enterprise.com,7120826773,Data Science,Associate Data Scientist,Daksh Memon,Mumbai,2023-11-18,Full-Time,58900.0,15800.0,722600.0,4.0,Male,31
+EMP0172,Mitali,Nagi,Mitali Nagi,mitali.nagi@enterprise.com,00193802620,Finance,Financial Analyst,Liam Ahuja,Mumbai,2022-08-19,Full-Time,39500.0,11600.0,485600.0,4.0,Female,23
+EMP0173,Sneha,Tandon,Sneha Tandon,sneha.tandon@enterprise.com,+914004991547,Customer Service,Customer Support Specialist,Azad Rajan,Ahmedabad,2023-11-23,Full-Time,65300.0,12800.0,796400.0,3.5,Female,22
+EMP0174,Yatin,Desai,Yatin Desai,yatin.desai@enterprise.com,7431527420,IT Support,Helpdesk Trainee,Upadhriti Rastogi,Ahmedabad,2020-02-27,Intern,22100.0,4100.0,269300.0,5.0,Male,24
+EMP0175,Pahal,Merchant,Pahal Merchant,pahal.merchant@enterprise.com,3296685161,Customer Service,Customer Success Lead,Azad Rajan,Delhi,2024-04-14,Full-Time,128300.0,27200.0,1566800.0,4.5,Female,34
+EMP0176,Hiral,Dey,Hiral Dey,hiral.dey@enterprise.com,05304637454,Marketing,Growth Marketing Lead,Rajata Gaba,Chennai,2018-06-22,Full-Time,137300.0,38900.0,1686500.0,3.5,Female,40
+EMP0177,Abdul,Lal,Abdul Lal,abdul.lal@enterprise.com,5301742684,Sales,Business Development Trainee,Ranveer Madan,Kolkata,2025-10-22,Intern,19300.0,4300.0,235900.0,3.5,Male,23
+EMP0178,Daniel,Merchant,Daniel Merchant,daniel.merchant@enterprise.com,09332727956,Data Science,Data Analyst,Daksh Memon,Bangalore,2019-02-15,Full-Time,75300.0,8400.0,912000.0,3.5,Male,32
+EMP0179,Vrishti,Yogi,Vrishti Yogi,vrishti.yogi@enterprise.com,3391878519,Human Resources,HR Executive,Praneel Padmanabhan,Ahmedabad,2025-04-18,Full-Time,78900.0,7400.0,954200.0,3.5,Female,30
+EMP0180,Dayita,Bhatia,Dayita Bhatia,dayita.bhatia@enterprise.com,8398225871,Sales,Senior Account Executive,Ranveer Madan,Mumbai,2022-09-08,Contract,125700.0,20800.0,1529200.0,4.5,Female,30
+EMP0181,Harshil,Suresh,Harshil Suresh,harshil.suresh@enterprise.com,+918707286790,Research & Development,Research Trainee,Upkaar Dara,Bangalore,2018-02-07,Intern,18700.0,4000.0,228400.0,3.5,Male,23
+EMP0182,Vihaan,Morar,Vihaan Morar,vihaan.morar@enterprise.com,0640391065,Research & Development,Research Trainee,Upkaar Dara,Mumbai,2023-08-28,Intern,34800.0,3200.0,420800.0,4.0,Male,23
+EMP0183,Azad,Bhasin,Azad Bhasin,azad.bhasin@enterprise.com,+917046226567,Administration,Senior Admin Coordinator,Daksh Bakshi,Chennai,2024-05-14,Full-Time,130300.0,15400.0,1579000.0,4.0,Male,36
+EMP0184,Ranbir,Prashad,Ranbir Prashad,ranbir.prashad@enterprise.com,+918251286823,Finance,Tax Analyst,Liam Ahuja,Mumbai,2019-07-30,Contract,55800.0,6300.0,675900.0,4.0,Male,28
+EMP0185,Aarav,Bajaj,Aarav Bajaj,aarav.bajaj@enterprise.com,07868633752,Engineering,Senior DevOps Engineer,Alexander Chander,Chennai,2025-05-01,Full-Time,146800.0,22500.0,1784100.0,3.5,Male,36
+EMP0186,Lakshit,Gulati,Lakshit Gulati,lakshit.gulati@enterprise.com,1069033119,Engineering,Frontend Developer,Alexander Chander,Pune,2025-03-01,Full-Time,64300.0,18800.0,790400.0,4.5,Male,28
+EMP0187,Anika,Sekhon,Anika Sekhon,anika.sekhon@enterprise.com,0306738302,Sales,Sales Executive,Ranveer Madan,Noida,2025-11-15,Contract,37700.0,16200.0,468600.0,4.0,Female,29
+EMP0188,Yashasvi,Mann,Yashasvi Mann,yashasvi.mann@enterprise.com,+919599534283,Administration,Office Coordinator,Daksh Bakshi,Kolkata,2023-01-04,Full-Time,64000.0,13900.0,781900.0,4.0,Female,25
+EMP0189,Triveni,Mital,Triveni Mital,triveni.mital@enterprise.com,00892687056,Human Resources,HR Intern,Praneel Padmanabhan,Kolkata,2019-09-06,Intern,31600.0,4600.0,383800.0,3.5,Female,20
+EMP0190,Zaitra,Nagar,Zaitra Nagar,zaitra.nagar@enterprise.com,6624628733,Human Resources,Payroll Executive,Praneel Padmanabhan,Ahmedabad,2019-06-25,Full-Time,74900.0,11700.0,910500.0,4.0,Female,23
+EMP0191,Netra,Dhawan,Netra Dhawan,netra.dhawan@enterprise.com,00866882634,Data Science,AI Research Scientist,Daksh Memon,Hyderabad,2024-06-26,Full-Time,130600.0,24900.0,1592100.0,3.0,Female,37
+EMP0192,Ishani,Narayanan,Ishani Narayanan,ishani.narayanan@enterprise.com,1751830469,Sales,Inside Sales Associate,Ranveer Madan,Noida,2020-01-08,Contract,79300.0,12100.0,963700.0,4.0,Female,23
+EMP0193,Anusha,Bora,Anusha Bora,anusha.bora@enterprise.com,+919837354033,Sales,Business Development Trainee,Ranveer Madan,Pune,2025-08-28,Intern,32400.0,4600.0,393400.0,5.0,Female,23
+EMP0194,Daniel,Srinivas,Daniel Srinivas,daniel.srinivas@enterprise.com,+919363854678,Product Management,Product Intern,Ira Dua,Hyderabad,2018-01-15,Intern,34900.0,2600.0,421400.0,4.0,Male,21
+EMP0195,Rachita,Morar,Rachita Morar,rachita.morar@enterprise.com,05877175355,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Mumbai,2021-02-03,Full-Time,71200.0,8700.0,863100.0,3.5,Female,28
+EMP0196,Samuel,Bath,Samuel Bath,samuel.bath@enterprise.com,3204899642,Engineering,Frontend Developer,Alexander Chander,Ahmedabad,2024-09-14,Full-Time,42000.0,6000.0,510000.0,4.0,Male,22
+EMP0197,Guneet,Narayan,Guneet Narayan,guneet.narayan@enterprise.com,+916937854777,Legal,Compliance Analyst,Radhika Handa,Mumbai,2023-08-26,Full-Time,40900.0,18000.0,508800.0,5.0,Male,30
+EMP0198,Frado,Pandey,Frado Pandey,frado.pandey@enterprise.com,+912872808010,Security,SOC Trainee,Gayathri Lanka,Hyderabad,2021-05-21,Intern,27000.0,3700.0,327700.0,4.5,Male,24
+EMP0199,Aarush,Sachar,Aarush Sachar,aarush.sachar@enterprise.com,+913120387509,Operations,Senior Operations Specialist,Hitesh Murty,Bangalore,2021-11-11,Full-Time,123800.0,25700.0,1511300.0,4.5,Male,33
+EMP0200,Warhi,Sura,Warhi Sura,warhi.sura@enterprise.com,+910886008484,Administration,Office Coordinator,Daksh Bakshi,Hyderabad,2020-07-12,Full-Time,45000.0,7800.0,547800.0,3.5,Female,24
+EMP0201,Abhiram,Thakkar,Abhiram Thakkar,abhiram.thakkar@enterprise.com,6211823398,Administration,Administrative Executive,Daksh Bakshi,Chennai,2020-04-12,Full-Time,57900.0,7000.0,701800.0,3.5,Male,28
+EMP0202,Jonathan,Pandya,Jonathan Pandya,jonathan.pandya@enterprise.com,06156793341,Research & Development,Lab Specialist,Upkaar Dara,Pune,2020-02-10,Full-Time,32600.0,10700.0,401900.0,4.5,Male,25
+EMP0203,Amol,Chander,Amol Chander,amol.chander@enterprise.com,06687002176,IT Support,Network Infrastructure Lead,Upadhriti Rastogi,Ahmedabad,2020-09-20,Full-Time,94800.0,19800.0,1157400.0,4.0,Male,28
+EMP0204,Noah,Chandran,Noah Chandran,noah.chandran@enterprise.com,0339740148,Operations,Operations Intern,Hitesh Murty,Chennai,2020-12-07,Intern,22600.0,3100.0,274300.0,3.5,Male,22
+EMP0205,Anamika,Gola,Anamika Gola,anamika.gola@enterprise.com,00392614293,IT Support,Cloud Support Lead,Upadhriti Rastogi,Bangalore,2024-04-23,Full-Time,144000.0,24300.0,1752300.0,4.5,Female,38
+EMP0206,Robert,Zachariah,Robert Zachariah,robert.zachariah@enterprise.com,06218501631,Engineering,Backend Lead,Alexander Chander,Ahmedabad,2024-03-05,Full-Time,103100.0,24500.0,1261700.0,4.0,Male,34
+EMP0207,Panini,Ranganathan,Panini Ranganathan,panini.ranganathan@enterprise.com,00477358662,Marketing,Social Media Executive,Rajata Gaba,Mumbai,2019-07-28,Contract,67000.0,11900.0,815900.0,4.0,Female,32
+EMP0208,Sachi,Chada,Sachi Chada,sachi.chada@enterprise.com,4311426265,Finance,Finance Intern,Liam Ahuja,Bangalore,2022-08-17,Intern,15700.0,4400.0,192800.0,3.0,Female,24
+EMP0209,Pranit,Chhabra,Pranit Chhabra,pranit.chhabra@enterprise.com,+910475412126,Human Resources,HR Executive,Praneel Padmanabhan,Ahmedabad,2018-03-06,Full-Time,48700.0,14300.0,598700.0,3.0,Male,29
+EMP0210,Vanya,Vala,Vanya Vala,vanya.vala@enterprise.com,01015819956,Engineering,Tech Lead,Alexander Chander,Mumbai,2019-03-15,Full-Time,81200.0,35300.0,1009700.0,4.5,Female,37
+EMP0211,Abeer,Manne,Abeer Manne,abeer.manne@enterprise.com,06183982622,Legal,Senior Compliance Specialist,Radhika Handa,Ahmedabad,2024-05-03,Full-Time,135600.0,17000.0,1644200.0,3.5,Male,36
+EMP0212,Krish,Mitra,Krish Mitra,krish.mitra@enterprise.com,07212646471,Marketing,Marketing Executive,Rajata Gaba,Noida,2024-03-13,Full-Time,68000.0,6400.0,822400.0,4.0,Male,32
+EMP0213,Pranit,Krishnamurthy,Pranit Krishnamurthy,pranit.krishnamurthy@enterprise.com,+917993712406,Procurement,Sourcing Lead,Nikita Khatri,Kolkata,2018-06-24,Full-Time,119600.0,36400.0,1471600.0,3.5,Male,38
+EMP0214,Osha,Rai,Osha Rai,osha.rai@enterprise.com,07569245937,Marketing,Senior Marketing Strategist,Rajata Gaba,Mumbai,2021-07-12,Full-Time,143000.0,29100.0,1745100.0,3.0,Female,36
+EMP0215,Naksh,Goel,Naksh Goel,naksh.goel@enterprise.com,05479356465,Data Science,AI Research Scientist,Daksh Memon,Kolkata,2021-09-20,Contract,91400.0,21000.0,1117800.0,3.5,Male,37
+EMP0216,Dakshesh,Iyengar,Dakshesh Iyengar,dakshesh.iyengar@enterprise.com,8280737416,Administration,Admin Intern,Daksh Bakshi,Noida,2020-08-08,Intern,29900.0,2400.0,361200.0,4.5,Male,24
+EMP0217,Yahvi,Dewan,Yahvi Dewan,yahvi.dewan@enterprise.com,4342661797,Data Science,Associate Data Scientist,Daksh Memon,Ahmedabad,2020-07-23,Full-Time,31500.0,9100.0,387100.0,3.5,Female,27
+EMP0218,Suhani,Warrior,Suhani Warrior,suhani.warrior@enterprise.com,6805891135,Operations,Supply Chain Lead,Hitesh Murty,Pune,2018-12-03,Full-Time,134100.0,22400.0,1631600.0,3.5,Female,30
+EMP0219,Geetika,Basu,Geetika Basu,geetika.basu@enterprise.com,6561014388,Procurement,Procurement Executive,Nikita Khatri,Ahmedabad,2022-01-14,Full-Time,48000.0,6400.0,582400.0,4.0,Female,27
+EMP0220,Indrajit,Sehgal,Indrajit Sehgal,indrajit.sehgal@enterprise.com,06798250714,Finance,Senior Auditor,Liam Ahuja,Kolkata,2019-01-17,Full-Time,108600.0,15700.0,1318900.0,4.0,Male,44
+EMP0221,Triya,Chada,Triya Chada,triya.chada@enterprise.com,+912545738757,Security,Information Security Officer,Gayathri Lanka,Kolkata,2019-11-26,Full-Time,66200.0,13400.0,807800.0,4.0,Female,23
+EMP0222,Chanakya,Sarma,Chanakya Sarma,chanakya.sarma@enterprise.com,7514010512,Finance,Senior Auditor,Liam Ahuja,Ahmedabad,2018-11-12,Full-Time,91700.0,21900.0,1122300.0,3.5,Male,30
+EMP0223,Jairaj,Varty,Jairaj Varty,jairaj.varty@enterprise.com,+918258673622,Procurement,Vendor Relations Associate,Nikita Khatri,Delhi,2024-12-15,Full-Time,35300.0,9600.0,433200.0,3.5,Male,29
+EMP0224,Upma,Randhawa,Upma Randhawa,upma.randhawa@enterprise.com,+919379660334,IT Support,Cloud Support Lead,Upadhriti Rastogi,Ahmedabad,2021-07-10,Contract,101000.0,30100.0,1242100.0,3.5,Female,32
+EMP0225,Bhavika,Chaudry,Bhavika Chaudry,bhavika.chaudry@enterprise.com,2553714785,Sales,Strategic Enterprise Account Lead,Ranveer Madan,Delhi,2019-04-12,Full-Time,102800.0,22000.0,1255600.0,4.5,Female,35
+EMP0226,Rishi,Ramanathan,Rishi Ramanathan,rishi.ramanathan@enterprise.com,1557924991,Data Science,Data Science Intern,Daksh Memon,Ahmedabad,2021-04-08,Intern,15500.0,3900.0,189900.0,4.5,Male,24
+EMP0227,Ekalinga,Munshi,Ekalinga Munshi,ekalinga.munshi@enterprise.com,+913412528669,Security,Information Security Officer,Gayathri Lanka,Noida,2022-03-25,Full-Time,61700.0,8600.0,749000.0,3.0,Male,24
+EMP0228,Ekantika,Rajagopal,Ekantika Rajagopal,ekantika.rajagopal@enterprise.com,02782827422,Data Science,Associate Data Scientist,Daksh Memon,Kolkata,2024-08-29,Contract,57200.0,16900.0,703300.0,4.0,Female,28
+EMP0229,Nakul,Seshadri,Nakul Seshadri,nakul.seshadri@enterprise.com,0507236887,Human Resources,Payroll Executive,Praneel Padmanabhan,Delhi,2022-10-30,Full-Time,62300.0,5700.0,753300.0,3.0,Male,24
+EMP0230,Samarth,Swamy,Samarth Swamy,samarth.swamy@enterprise.com,07721903404,Marketing,Growth Marketing Lead,Rajata Gaba,Delhi,2018-04-11,Full-Time,111200.0,24800.0,1359200.0,4.0,Male,35
+EMP0231,Jeevika,Yogi,Jeevika Yogi,jeevika.yogi@enterprise.com,02797881914,Operations,Operations Intern,Hitesh Murty,Chennai,2021-11-06,Intern,31600.0,3900.0,383100.0,4.0,Female,20
+EMP0232,Qadim,Barman,Qadim Barman,qadim.barman@enterprise.com,7836134074,Customer Service,Customer Support Specialist,Azad Rajan,Bangalore,2021-11-06,Full-Time,45900.0,9500.0,560300.0,4.0,Male,29
+EMP0233,Owen,Chahal,Owen Chahal,owen.chahal@enterprise.com,01339596292,Research & Development,R&D Intern,Upkaar Dara,Ahmedabad,2020-08-07,Intern,18500.0,1600.0,223600.0,4.0,Male,24
+EMP0234,Harshil,Jhaveri,Harshil Jhaveri,harshil.jhaveri@enterprise.com,+919584982544,Finance,Accounts Executive,Liam Ahuja,Noida,2018-01-19,Full-Time,74200.0,11700.0,902100.0,4.0,Male,31
+EMP0235,Kiaan,Varkey,Kiaan Varkey,kiaan.varkey@enterprise.com,1260422325,Marketing,Marketing Executive,Rajata Gaba,Pune,2020-12-10,Full-Time,39300.0,9900.0,481500.0,4.0,Male,30
+EMP0236,Krishna,Ramaswamy,Krishna Ramaswamy,krishna.ramaswamy@enterprise.com,02946671168,Customer Service,Customer Service Trainee,Azad Rajan,Delhi,2021-12-12,Intern,22800.0,2600.0,276200.0,4.5,Female,24
+EMP0237,Liam,Pillay,Liam Pillay,liam.pillay@enterprise.com,07590175186,Security,Information Security Officer,Gayathri Lanka,Hyderabad,2021-06-04,Contract,34200.0,7000.0,417400.0,3.0,Male,31
+EMP0238,Janani,Sanghvi,Janani Sanghvi,janani.sanghvi@enterprise.com,+917454589297,Procurement,Sourcing Lead,Nikita Khatri,Kolkata,2025-10-11,Full-Time,120200.0,25600.0,1468000.0,4.5,Female,32
+EMP0239,Onveer,Bava,Onveer Bava,onveer.bava@enterprise.com,+911701277063,Customer Service,Customer Success Lead,Azad Rajan,Bangalore,2023-06-08,Full-Time,138900.0,30500.0,1697300.0,3.0,Male,38
+EMP0240,Ekaja,Mittal,Ekaja Mittal,ekaja.mittal@enterprise.com,+914154152064,Customer Service,Customer Support Specialist,Azad Rajan,Mumbai,2018-12-05,Full-Time,50800.0,17600.0,627200.0,4.0,Female,29
+EMP0241,Jackson,Sanghvi,Jackson Sanghvi,jackson.sanghvi@enterprise.com,1103712938,Marketing,Senior Marketing Strategist,Rajata Gaba,Kolkata,2023-09-24,Full-Time,134700.0,29100.0,1645500.0,3.0,Male,33
+EMP0242,Tristan,Andra,Tristan Andra,tristan.andra@enterprise.com,+915162713611,Marketing,SEO Specialist,Rajata Gaba,Noida,2019-02-24,Full-Time,68000.0,11600.0,827600.0,4.0,Male,22
+EMP0243,Charan,Munshi,Charan Munshi,charan.munshi@enterprise.com,04262218909,Marketing,Marketing Intern,Rajata Gaba,Ahmedabad,2019-04-26,Intern,20300.0,4400.0,248000.0,4.0,Male,23
+EMP0244,Fitan,Sarraf,Fitan Sarraf,fitan.sarraf@enterprise.com,03269731121,Legal,Contracts Specialist,Radhika Handa,Hyderabad,2020-04-27,Full-Time,61600.0,7500.0,746700.0,4.5,Male,31
+EMP0245,Sanaya,Panchal,Sanaya Panchal,sanaya.panchal@enterprise.com,05234138999,Customer Service,Escalation Specialist,Azad Rajan,Mumbai,2026-05-31,Full-Time,100300.0,21700.0,1225300.0,4.0,Female,37
+EMP0246,Lucky,Bala,Lucky Bala,lucky.bala@enterprise.com,4389836403,Marketing,Marketing Intern,Rajata Gaba,Noida,2023-06-28,Intern,20000.0,3800.0,243800.0,3.0,Male,21
+EMP0247,Yachana,Raju,Yachana Raju,yachana.raju@enterprise.com,+913791805526,Product Management,Product Operations Specialist,Ira Dua,Ahmedabad,2023-06-23,Full-Time,50100.0,16200.0,617400.0,3.5,Female,23
+EMP0248,Shivansh,Pau,Shivansh Pau,shivansh.pau@enterprise.com,2710910430,Security,Cybersecurity Associate,Gayathri Lanka,Kolkata,2022-06-18,Full-Time,61700.0,15500.0,755900.0,3.5,Male,29
+EMP0249,Bhanumati,Rao,Bhanumati Rao,bhanumati.rao@enterprise.com,4866618892,Security,Threat Hunter,Gayathri Lanka,Delhi,2025-08-27,Full-Time,103600.0,29400.0,1272600.0,4.0,Female,37
+EMP0250,Liam,Chacko,Liam Chacko,liam.chacko@enterprise.com,01832856914,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Hyderabad,2025-09-21,Full-Time,52100.0,5000.0,630200.0,4.5,Male,24
+EMP0251,Urmi,Khare,Urmi Khare,urmi.khare@enterprise.com,+913161799042,Finance,Accounts Trainee,Liam Ahuja,Mumbai,2018-08-01,Intern,28100.0,2000.0,339200.0,3.5,Female,20
+EMP0252,Dipta,Arora,Dipta Arora,dipta.arora@enterprise.com,2027588425,Procurement,Procurement Executive,Nikita Khatri,Pune,2019-06-28,Full-Time,65200.0,5000.0,787400.0,4.0,Female,23
+EMP0253,Edhitha,Luthra,Edhitha Luthra,edhitha.luthra@enterprise.com,1056481491,Engineering,Tech Lead,Alexander Chander,Noida,2019-01-01,Full-Time,128600.0,26900.0,1570100.0,4.0,Female,41
+EMP0254,Yuvraj,Shah,Yuvraj Shah,yuvraj.shah@enterprise.com,5079252419,Human Resources,Senior Talent Recruiter,Praneel Padmanabhan,Kolkata,2024-04-26,Full-Time,124900.0,31900.0,1530700.0,3.0,Male,32
+EMP0255,Dalbir,Kari,Dalbir Kari,dalbir.kari@enterprise.com,8000307562,IT Support,IT Support Specialist,Upadhriti Rastogi,Hyderabad,2018-12-22,Full-Time,76000.0,14200.0,926200.0,4.5,Male,24
+EMP0256,Gaurav,Banik,Gaurav Banik,gaurav.banik@enterprise.com,6353654195,Administration,Facilities Lead,Daksh Bakshi,Pune,2020-10-13,Full-Time,102000.0,18500.0,1242500.0,4.0,Male,41
+EMP0257,Dipta,Thakkar,Dipta Thakkar,dipta.thakkar@enterprise.com,0238061744,Administration,Admin Intern,Daksh Bakshi,Noida,2021-04-25,Intern,19100.0,3400.0,232600.0,4.0,Female,22
+EMP0258,Nihal,Chadha,Nihal Chadha,nihal.chadha@enterprise.com,7053494937,IT Support,IT Support Specialist,Upadhriti Rastogi,Delhi,2021-07-20,Full-Time,33600.0,18300.0,421500.0,3.0,Male,31
+EMP0259,Raksha,Tak,Raksha Tak,raksha.tak@enterprise.com,+918320603850,Sales,Sales Executive,Ranveer Madan,Hyderabad,2018-06-13,Full-Time,30800.0,6000.0,375600.0,4.5,Female,23
+EMP0260,Oviya,Agarwal,Oviya Agarwal,oviya.agarwal@enterprise.com,6413836702,Customer Service,Escalation Specialist,Azad Rajan,Chennai,2018-12-09,Full-Time,109700.0,25100.0,1341500.0,3.5,Female,41
+EMP0261,Logan,Chander,Logan Chander,logan.chander@enterprise.com,+913865719182,Administration,Facilities Lead,Daksh Bakshi,Bangalore,2020-09-28,Full-Time,101700.0,25900.0,1246300.0,3.0,Male,30
+EMP0262,Shravya,Borde,Shravya Borde,shravya.borde@enterprise.com,9062344565,Human Resources,Payroll Executive,Praneel Padmanabhan,Bangalore,2025-12-09,Full-Time,67100.0,16100.0,821300.0,3.0,Female,32
+EMP0263,Nathan,Sethi,Nathan Sethi,nathan.sethi@enterprise.com,03132912127,Finance,Accounts Executive,Liam Ahuja,Pune,2026-08-26,Full-Time,38300.0,6900.0,466500.0,4.5,Male,26
+EMP0264,Vidhi,Murthy,Vidhi Murthy,vidhi.murthy@enterprise.com,01853747411,Administration,Office Coordinator,Daksh Bakshi,Bangalore,2023-08-09,Full-Time,61400.0,12400.0,749200.0,4.5,Female,31
+EMP0265,Farhan,Modi,Farhan Modi,farhan.modi@enterprise.com,9035213568,Sales,Senior Account Executive,Ranveer Madan,Bangalore,2020-09-28,Contract,96000.0,27700.0,1179700.0,3.0,Male,31
+EMP0266,Arya,Mistry,Arya Mistry,arya.mistry@enterprise.com,02067883171,Operations,Operations Intern,Hitesh Murty,Hyderabad,2021-08-11,Intern,26100.0,4700.0,317900.0,3.5,Female,20
+EMP0267,Ekiya,Dara,Ekiya Dara,ekiya.dara@enterprise.com,+910323651994,Marketing,SEO Specialist,Rajata Gaba,Noida,2018-10-10,Full-Time,75100.0,7700.0,908900.0,4.5,Female,32
+EMP0268,Bishakha,Bains,Bishakha Bains,bishakha.bains@enterprise.com,+913721510702,Administration,Facilities Officer,Daksh Bakshi,Hyderabad,2023-03-16,Full-Time,30400.0,8000.0,372800.0,3.5,Female,29
+EMP0269,Upma,Rana,Upma Rana,upma.rana@enterprise.com,00662532447,Administration,Office Coordinator,Daksh Bakshi,Hyderabad,2024-01-28,Contract,37500.0,19000.0,469000.0,3.5,Female,25
+EMP0270,Falan,Banerjee,Falan Banerjee,falan.banerjee@enterprise.com,9934768701,Sales,Strategic Enterprise Account Lead,Ranveer Madan,Noida,2023-07-09,Full-Time,87300.0,28200.0,1075800.0,5.0,Male,37
+EMP0271,Logan,Rajagopal,Logan Rajagopal,logan.rajagopal@enterprise.com,+916383806578,Procurement,Senior Procurement Specialist,Nikita Khatri,Pune,2024-07-06,Contract,108900.0,37400.0,1344200.0,3.0,Male,44
+EMP0272,Xavier,Padmanabhan,Xavier Padmanabhan,xavier.padmanabhan@enterprise.com,8564205930,Product Management,Associate Product Manager,Ira Dua,Chennai,2020-12-05,Full-Time,51700.0,19500.0,639900.0,4.5,Male,22
+EMP0273,Meera,Bhardwaj,Meera Bhardwaj,meera.bhardwaj@enterprise.com,08593213348,Procurement,Buyer,Nikita Khatri,Pune,2019-09-29,Full-Time,41700.0,19200.0,519600.0,3.0,Female,26
+EMP0274,Baghyawati,Kanda,Baghyawati Kanda,baghyawati.kanda@enterprise.com,6522395590,IT Support,Senior Systems Engineer,Upadhriti Rastogi,Pune,2019-10-08,Full-Time,111600.0,26600.0,1365800.0,4.5,Female,34
+EMP0275,Qushi,Dhar,Qushi Dhar,qushi.dhar@enterprise.com,3784270103,Security,Cybersecurity Associate,Gayathri Lanka,Noida,2023-10-05,Full-Time,37400.0,15700.0,464500.0,3.0,Female,27
+EMP0276,Januja,Bahri,Januja Bahri,januja.bahri@enterprise.com,7059325250,Marketing,Content Strategist,Rajata Gaba,Pune,2023-03-08,Full-Time,72700.0,13300.0,885700.0,3.0,Female,28
+EMP0277,Advay,Divan,Advay Divan,advay.divan@enterprise.com,2185156915,Human Resources,Senior HR Business Partner,Praneel Padmanabhan,Chennai,2018-11-04,Full-Time,106100.0,30800.0,1304000.0,3.0,Male,40
+EMP0278,Matthew,Naidu,Matthew Naidu,matthew.naidu@enterprise.com,+912675289539,Legal,Legal Intern,Radhika Handa,Pune,2018-06-24,Intern,16800.0,4400.0,206000.0,4.5,Male,21
+EMP0279,Gagan,Radhakrishnan,Gagan Radhakrishnan,gagan.radhakrishnan@enterprise.com,04220969029,Finance,Accounts Trainee,Liam Ahuja,Mumbai,2021-12-20,Intern,24900.0,2500.0,301300.0,3.5,Male,23
+EMP0280,Nathan,Kant,Nathan Kant,nathan.kant@enterprise.com,9172513552,Marketing,Senior Marketing Strategist,Rajata Gaba,Bangalore,2018-12-26,Full-Time,125300.0,27500.0,1531100.0,3.5,Male,35
+EMP0281,Chaitanya,Nayak,Chaitanya Nayak,chaitanya.nayak@enterprise.com,00433154100,Operations,Supply Chain Lead,Hitesh Murty,Ahmedabad,2024-02-09,Full-Time,149300.0,34500.0,1826100.0,4.0,Male,28
+EMP0282,Sanya,Sarma,Sanya Sarma,sanya.sarma@enterprise.com,6267658617,Research & Development,Lab Specialist,Upkaar Dara,Chennai,2018-08-28,Full-Time,31300.0,14000.0,389600.0,4.5,Female,24
+EMP0283,Jeevika,Gaba,Jeevika Gaba,jeevika.gaba@enterprise.com,01040541152,Customer Service,Client Support Associate,Azad Rajan,Kolkata,2026-04-07,Contract,35000.0,14900.0,434900.0,3.0,Female,24
+EMP0284,Raghav,Dyal,Raghav Dyal,raghav.dyal@enterprise.com,1815997062,Data Science,BI Developer,Daksh Memon,Bangalore,2025-11-21,Full-Time,38800.0,13900.0,479500.0,4.0,Male,24
+EMP0285,Teerth,Dugar,Teerth Dugar,teerth.dugar@enterprise.com,+911533688444,Data Science,Data Analytics Trainee,Daksh Memon,Bangalore,2020-08-10,Intern,21200.0,3000.0,257400.0,4.0,Male,24
+EMP0286,Jagat,Char,Jagat Char,jagat.char@enterprise.com,+916987205061,Customer Service,Customer Support Specialist,Azad Rajan,Delhi,2018-09-01,Contract,70300.0,10100.0,853700.0,3.0,Male,25
+EMP0287,Manan,Srinivasan,Manan Srinivasan,manan.srinivasan@enterprise.com,+911032417146,Administration,Facilities Lead,Daksh Bakshi,Delhi,2021-05-21,Contract,129300.0,31600.0,1583200.0,3.5,Male,39
+EMP0288,Warinder,Suresh,Warinder Suresh,warinder.suresh@enterprise.com,4186256527,Procurement,Procurement Intern,Nikita Khatri,Hyderabad,2025-06-19,Intern,18500.0,4900.0,226900.0,4.0,Male,22
+EMP0289,Anthony,Lall,Anthony Lall,anthony.lall@enterprise.com,07434902115,Operations,Supply Chain Lead,Hitesh Murty,Bangalore,2020-01-16,Full-Time,131000.0,38700.0,1610700.0,4.0,Male,33
+EMP0290,Samuel,Karan,Samuel Karan,samuel.karan@enterprise.com,0686879374,Product Management,Product Operations Specialist,Ira Dua,Pune,2025-12-13,Full-Time,41900.0,19700.0,522500.0,4.0,Male,23
+EMP0291,Chaaya,Rana,Chaaya Rana,chaaya.rana@enterprise.com,0898992172,IT Support,Senior Systems Engineer,Upadhriti Rastogi,Bangalore,2022-04-30,Full-Time,104500.0,34700.0,1288700.0,3.5,Female,30
+EMP0292,Geetika,Kakar,Geetika Kakar,geetika.kakar@enterprise.com,+912061632945,Finance,Accounts Trainee,Liam Ahuja,Hyderabad,2019-10-29,Intern,22000.0,2500.0,266500.0,4.0,Female,23
+EMP0293,Bahadurjit,Chahal,Bahadurjit Chahal,bahadurjit.chahal@enterprise.com,08685487099,Marketing,Brand Lead,Rajata Gaba,Pune,2024-02-19,Contract,103900.0,37200.0,1284000.0,4.5,Male,30
+EMP0294,Shaurya,Chowdhury,Shaurya Chowdhury,shaurya.chowdhury@enterprise.com,02299911914,Sales,Inside Sales Associate,Ranveer Madan,Mumbai,2018-08-08,Contract,51600.0,14800.0,634000.0,3.0,Male,22
+EMP0295,Orinder,Roy,Orinder Roy,orinder.roy@enterprise.com,06799702462,Legal,Contracts Specialist,Radhika Handa,Pune,2018-07-23,Full-Time,43300.0,9200.0,528800.0,3.5,Male,30
+EMP0296,Suhani,Barad,Suhani Barad,suhani.barad@enterprise.com,05307450544,Finance,Senior Financial Analyst,Liam Ahuja,Hyderabad,2019-02-02,Full-Time,137700.0,30600.0,1683000.0,3.0,Female,37
+EMP0297,Logan,Swamy,Logan Swamy,logan.swamy@enterprise.com,1324754691,Product Management,Product Manager,Ira Dua,Chennai,2019-01-09,Full-Time,101600.0,24900.0,1244100.0,4.0,Male,31
+EMP0298,Ijaya,Sathe,Ijaya Sathe,ijaya.sathe@enterprise.com,+916785082148,Finance,Accounts Executive,Liam Ahuja,Hyderabad,2021-01-05,Full-Time,32200.0,11600.0,398000.0,4.0,Female,29
+EMP0299,Saksham,Deshmukh,Saksham Deshmukh,saksham.deshmukh@enterprise.com,9023303070,Administration,Administrative Executive,Daksh Bakshi,Kolkata,2018-09-07,Full-Time,70400.0,11200.0,856000.0,4.5,Male,27
+EMP0300,Radha,Issac,Radha Issac,radha.issac@enterprise.com,05786103579,Customer Service,Customer Support Specialist,Azad Rajan,Kolkata,2024-05-28,Full-Time,53800.0,6200.0,651800.0,4.5,Female,25
+EMP0301,Udant,Goel,Udant Goel,udant.goel@enterprise.com,09855241406,Human Resources,Recruitment Trainee,Praneel Padmanabhan,Hyderabad,2019-06-01,Intern,34000.0,1700.0,409700.0,3.0,Male,21
+EMP0302,Aryan,Gaba,Aryan Gaba,aryan.gaba@enterprise.com,3333468007,Product Management,Associate Product Manager,Ira Dua,Pune,2022-05-09,Full-Time,46000.0,15900.0,567900.0,4.0,Male,26
+EMP0303,Ekaja,Ghose,Ekaja Ghose,ekaja.ghose@enterprise.com,0349446657,Security,Threat Hunter,Gayathri Lanka,Pune,2022-08-25,Contract,135100.0,30600.0,1651800.0,3.0,Female,28
+EMP0304,Jonathan,Kamdar,Jonathan Kamdar,jonathan.kamdar@enterprise.com,04896910858,Research & Development,Senior Research Scientist,Upkaar Dara,Ahmedabad,2018-06-03,Full-Time,141500.0,21600.0,1719600.0,3.5,Male,39
+EMP0305,Megha,Misra,Megha Misra,megha.misra@enterprise.com,1715454443,Finance,Tax Analyst,Liam Ahuja,Bangalore,2026-05-13,Full-Time,49800.0,18200.0,615800.0,4.0,Female,22
+EMP0306,Falguni,Varughese,Falguni Varughese,falguni.varughese@enterprise.com,+910965207446,Research & Development,Lab Specialist,Upkaar Dara,Hyderabad,2019-07-05,Full-Time,45500.0,17600.0,563600.0,3.5,Female,26
+EMP0307,Tanmayi,Rama,Tanmayi Rama,tanmayi.rama@enterprise.com,0993538758,Administration,Facilities Officer,Daksh Bakshi,Noida,2026-04-23,Full-Time,62300.0,7800.0,755400.0,4.0,Female,31
+EMP0308,Netra,Garde,Netra Garde,netra.garde@enterprise.com,8241724825,Security,Senior Cybersecurity Analyst,Gayathri Lanka,Mumbai,2020-02-29,Full-Time,108200.0,34500.0,1332900.0,4.5,Female,44
+EMP0309,Chaitanya,Kapadia,Chaitanya Kapadia,chaitanya.kapadia@enterprise.com,03465549471,Security,Senior Cybersecurity Analyst,Gayathri Lanka,Kolkata,2022-06-14,Full-Time,129300.0,21800.0,1573400.0,4.0,Male,39
+EMP0310,Wahab,Bera,Wahab Bera,wahab.bera@enterprise.com,9991738168,Product Management,Senior Product Manager,Ira Dua,Delhi,2019-11-01,Full-Time,92400.0,36800.0,1145600.0,4.5,Male,42
+EMP0311,Neha,Sachdev,Neha Sachdev,neha.sachdev@enterprise.com,+912235697252,Procurement,Procurement Executive,Nikita Khatri,Hyderabad,2025-04-05,Full-Time,32500.0,17800.0,407800.0,3.5,Female,28
+EMP0312,Banjeet,Sura,Banjeet Sura,banjeet.sura@enterprise.com,02500743292,Marketing,Marketing Executive,Rajata Gaba,Bangalore,2020-07-05,Full-Time,30400.0,18700.0,383500.0,3.5,Male,32
+EMP0313,Wishi,Chakrabarti,Wishi Chakrabarti,wishi.chakrabarti@enterprise.com,+919666676008,Procurement,Procurement Intern,Nikita Khatri,Chennai,2020-06-12,Intern,32900.0,4400.0,399200.0,4.0,Female,23
+EMP0314,Irya,Prakash,Irya Prakash,irya.prakash@enterprise.com,+915830033542,Data Science,Senior Data Engineer,Daksh Memon,Delhi,2021-02-06,Full-Time,100900.0,17700.0,1228500.0,4.0,Female,37
+EMP0315,Dalaja,Rajagopal,Dalaja Rajagopal,dalaja.rajagopal@enterprise.com,9421044789,Marketing,SEO Specialist,Rajata Gaba,Delhi,2025-08-20,Full-Time,68300.0,18500.0,838100.0,3.0,Female,30
+EMP0316,Om,Saraf,Om Saraf,om.saraf@enterprise.com,2575326033,Product Management,Product Operations Specialist,Ira Dua,Delhi,2026-02-23,Full-Time,50200.0,16100.0,618500.0,4.0,Male,28
+EMP0317,Ekaja,Kakar,Ekaja Kakar,ekaja.kakar@enterprise.com,0982150648,Research & Development,Research Trainee,Upkaar Dara,Chennai,2019-02-04,Intern,21000.0,1700.0,253700.0,4.0,Female,24
+EMP0318,Arunima,Bava,Arunima Bava,arunima.bava@enterprise.com,1001676184,Procurement,Procurement Executive,Nikita Khatri,Chennai,2022-09-19,Contract,62700.0,8300.0,760700.0,4.0,Female,27
+EMP0319,Vritti,Dua,Vritti Dua,vritti.dua@enterprise.com,+910461849926,Sales,Regional Sales Lead,Ranveer Madan,Ahmedabad,2020-03-07,Full-Time,112900.0,36700.0,1391500.0,4.0,Female,31
+EMP0320,Damini,Vaidya,Damini Vaidya,damini.vaidya@enterprise.com,9141173934,Customer Service,Senior Support Specialist,Azad Rajan,Ahmedabad,2019-08-10,Full-Time,89600.0,20000.0,1095200.0,3.5,Female,32
+EMP0321,Harrison,Parmar,Harrison Parmar,harrison.parmar@enterprise.com,6420873753,Administration,Facilities Lead,Daksh Bakshi,Chennai,2020-05-07,Full-Time,101900.0,16500.0,1239300.0,4.0,Male,33
+EMP0322,Aarav,Arya,Aarav Arya,aarav.arya@enterprise.com,1197218114,Data Science,BI Developer,Daksh Memon,Noida,2022-10-24,Full-Time,36500.0,11500.0,449500.0,5.0,Male,23
+EMP0323,Kala,Shan,Kala Shan,kala.shan@enterprise.com,04701204556,Engineering,Senior DevOps Engineer,Alexander Chander,Bangalore,2025-08-03,Full-Time,142400.0,33900.0,1742700.0,3.0,Female,28
+EMP0324,Dalbir,Chandran,Dalbir Chandran,dalbir.chandran@enterprise.com,+910225579415,Legal,Compliance Analyst,Radhika Handa,Pune,2018-07-07,Full-Time,49200.0,13800.0,604200.0,3.5,Male,23
+EMP0325,Pavani,Goswami,Pavani Goswami,pavani.goswami@enterprise.com,+916674676212,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Ahmedabad,2022-01-11,Full-Time,74400.0,19900.0,912700.0,4.0,Female,28
+EMP0326,Ayushman,Dutta,Ayushman Dutta,ayushman.dutta@enterprise.com,+916979729659,Research & Development,Research Trainee,Upkaar Dara,Hyderabad,2026-03-26,Intern,19600.0,3900.0,239100.0,3.0,Male,20
+EMP0327,Akshay,De,Akshay De,akshay.de@enterprise.com,07167014508,Human Resources,Payroll Executive,Praneel Padmanabhan,Bangalore,2025-06-04,Full-Time,73800.0,8800.0,894400.0,3.0,Male,28
+EMP0328,Isaac,Nigam,Isaac Nigam,isaac.nigam@enterprise.com,8916375628,Engineering,Frontend Developer,Alexander Chander,Hyderabad,2025-10-18,Full-Time,57400.0,12100.0,700900.0,4.0,Male,23
+EMP0329,Avi,Apte,Avi Apte,avi.apte@enterprise.com,2877217535,Marketing,Marketing Executive,Rajata Gaba,Pune,2023-09-27,Full-Time,61100.0,15500.0,748700.0,4.0,Male,26
+EMP0330,Liam,Bedi,Liam Bedi,liam.bedi@enterprise.com,3866317797,Marketing,Senior Marketing Strategist,Rajata Gaba,Delhi,2025-11-21,Full-Time,134500.0,35800.0,1649800.0,3.5,Male,34
+EMP0331,Chaitanya,Tara,Chaitanya Tara,chaitanya.tara@enterprise.com,05170166088,Engineering,QA Engineer,Alexander Chander,Pune,2024-06-09,Full-Time,46500.0,5000.0,563000.0,4.0,Male,29
+EMP0332,Aadi,Chand,Aadi Chand,aadi.chand@enterprise.com,9488375503,Human Resources,HR Executive,Praneel Padmanabhan,Chennai,2020-12-17,Full-Time,75200.0,14700.0,917100.0,4.0,Male,23
+EMP0333,Utkarsh,Narula,Utkarsh Narula,utkarsh.narula@enterprise.com,9975711305,Security,Senior Cybersecurity Analyst,Gayathri Lanka,Pune,2026-07-03,Full-Time,136100.0,22800.0,1656000.0,4.5,Male,39
+EMP0334,Peter,Manne,Peter Manne,peter.manne@enterprise.com,8510272614,Security,Cloud Security Lead,Gayathri Lanka,Pune,2022-03-07,Full-Time,142600.0,38900.0,1750100.0,4.5,Male,39
+EMP0335,Guneet,Guha,Guneet Guha,guneet.guha@enterprise.com,+916373516091,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Mumbai,2019-04-09,Full-Time,64500.0,12200.0,786200.0,3.0,Male,28
+EMP0336,Umang,Shankar,Umang Shankar,umang.shankar@enterprise.com,9827080869,Security,Threat Hunter,Gayathri Lanka,Noida,2026-09-27,Contract,136200.0,32000.0,1666400.0,3.5,Male,43
+EMP0337,Wyatt,Trivedi,Wyatt Trivedi,wyatt.trivedi@enterprise.com,+919221699586,Security,Cybersecurity Associate,Gayathri Lanka,Ahmedabad,2018-07-08,Contract,54200.0,12300.0,662700.0,3.0,Male,24
+EMP0338,Ubika,Kothari,Ubika Kothari,ubika.kothari@enterprise.com,06547226984,Engineering,QA Engineer,Alexander Chander,Noida,2025-06-03,Contract,73700.0,12800.0,897200.0,4.0,Female,32
+EMP0339,Nirja,Kalla,Nirja Kalla,nirja.kalla@enterprise.com,+913945228851,Sales,Inside Sales Associate,Ranveer Madan,Mumbai,2023-09-02,Full-Time,74600.0,14200.0,909400.0,4.5,Female,30
+EMP0340,Qushi,Srinivasan,Qushi Srinivasan,qushi.srinivasan@enterprise.com,9684608106,Security,Threat Hunter,Gayathri Lanka,Kolkata,2025-03-20,Full-Time,147900.0,16300.0,1791100.0,3.5,Female,38
+EMP0341,Elijah,Bera,Elijah Bera,elijah.bera@enterprise.com,0342442043,Human Resources,Payroll Executive,Praneel Padmanabhan,Bangalore,2019-02-25,Full-Time,52400.0,6800.0,635600.0,3.5,Male,29
+EMP0342,Amol,Parmer,Amol Parmer,amol.parmer@enterprise.com,01983863840,Customer Service,Customer Service Executive,Azad Rajan,Ahmedabad,2021-10-28,Full-Time,61900.0,18400.0,761200.0,3.5,Male,31
+EMP0343,Rayaan,Ram,Rayaan Ram,rayaan.ram@enterprise.com,05800439735,Security,Threat Hunter,Gayathri Lanka,Pune,2019-02-04,Full-Time,130200.0,24100.0,1586500.0,4.0,Male,43
+EMP0344,Guneet,Hari,Guneet Hari,guneet.hari@enterprise.com,07212281606,Engineering,Tech Lead,Alexander Chander,Ahmedabad,2019-07-30,Full-Time,129100.0,16100.0,1565300.0,4.5,Male,39
+EMP0345,Maya,Lalla,Maya Lalla,maya.lalla@enterprise.com,+912940572025,Human Resources,Senior HR Business Partner,Praneel Padmanabhan,Delhi,2019-03-18,Full-Time,95100.0,35600.0,1176800.0,4.0,Female,40
+EMP0346,Atharv,Mitra,Atharv Mitra,atharv.mitra@enterprise.com,09851583281,Research & Development,Innovation Engineer,Upkaar Dara,Ahmedabad,2018-01-18,Full-Time,52900.0,13800.0,648600.0,4.0,Male,29
+EMP0347,Zayyan,Dutta,Zayyan Dutta,zayyan.dutta@enterprise.com,08861533555,Customer Service,Customer Service Trainee,Azad Rajan,Mumbai,2019-03-01,Intern,30600.0,4600.0,371800.0,3.5,Male,24
+EMP0348,Nandini,Kamdar,Nandini Kamdar,nandini.kamdar@enterprise.com,8780157399,Customer Service,Customer Service Trainee,Azad Rajan,Noida,2021-11-05,Intern,33300.0,4000.0,403600.0,5.0,Female,24
+EMP0349,Keya,Baral,Keya Baral,keya.baral@enterprise.com,5616484085,Administration,Facilities Lead,Daksh Bakshi,Kolkata,2025-02-04,Full-Time,100900.0,32500.0,1243300.0,3.5,Female,44
+EMP0350,Udant,Sur,Udant Sur,udant.sur@enterprise.com,+914358112880,Data Science,Associate Data Scientist,Daksh Memon,Kolkata,2024-02-01,Full-Time,36600.0,15700.0,454900.0,4.0,Male,32
+EMP0351,Bhavini,Kade,Bhavini Kade,bhavini.kade@enterprise.com,3613861207,Procurement,Sourcing Lead,Nikita Khatri,Noida,2018-02-22,Full-Time,127200.0,37300.0,1563700.0,4.0,Female,41
+EMP0352,Noah,Barad,Noah Barad,noah.barad@enterprise.com,+911024819346,Operations,Supply Chain Lead,Hitesh Murty,Chennai,2019-08-23,Full-Time,132500.0,19000.0,1609000.0,4.5,Male,36
+EMP0353,Sara,Seshadri,Sara Seshadri,sara.seshadri@enterprise.com,6650618091,Legal,Legal Associate,Radhika Handa,Kolkata,2022-05-12,Full-Time,35100.0,18000.0,439200.0,3.5,Female,29
+EMP0354,Aradhana,Bora,Aradhana Bora,aradhana.bora@enterprise.com,08144914766,Procurement,Buyer,Nikita Khatri,Chennai,2020-04-11,Full-Time,45600.0,13300.0,560500.0,4.0,Female,32
+EMP0355,Amruta,Som,Amruta Som,amruta.som@enterprise.com,+918326842450,Security,Cloud Security Lead,Gayathri Lanka,Hyderabad,2021-04-19,Full-Time,132900.0,28700.0,1623500.0,3.5,Female,39
+EMP0356,Ekavir,Dasgupta,Ekavir Dasgupta,ekavir.dasgupta@enterprise.com,+910996881435,Finance,Finance Intern,Liam Ahuja,Mumbai,2019-10-22,Intern,15800.0,2100.0,191700.0,4.0,Male,23
+EMP0357,Jagvi,Sachar,Jagvi Sachar,jagvi.sachar@enterprise.com,8222394312,Engineering,Senior DevOps Engineer,Alexander Chander,Ahmedabad,2024-06-03,Full-Time,121800.0,34300.0,1495900.0,4.0,Female,38
+EMP0358,Avi,Shenoy,Avi Shenoy,avi.shenoy@enterprise.com,8141413975,Administration,Office Coordinator,Daksh Bakshi,Noida,2024-02-03,Full-Time,56000.0,16800.0,688800.0,4.0,Male,24
+EMP0359,Pranav,Dave,Pranav Dave,pranav.dave@enterprise.com,3149135775,Sales,Senior Account Executive,Ranveer Madan,Kolkata,2026-06-08,Full-Time,105300.0,20500.0,1284100.0,5.0,Male,38
+EMP0360,Michael,Dua,Michael Dua,michael.dua@enterprise.com,9556205336,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Delhi,2022-04-12,Full-Time,60700.0,14300.0,742700.0,4.5,Male,32
+EMP0361,Lakshit,Parsa,Lakshit Parsa,lakshit.parsa@enterprise.com,+915777547812,Operations,Supply Chain Lead,Hitesh Murty,Ahmedabad,2018-06-29,Full-Time,137500.0,24400.0,1674400.0,3.5,Male,44
+EMP0362,Banjeet,Mand,Banjeet Mand,banjeet.mand@enterprise.com,+918341108099,Sales,Sales Executive,Ranveer Madan,Hyderabad,2025-09-08,Full-Time,56700.0,14400.0,694800.0,3.5,Male,30
+EMP0363,Samaksh,Kala,Samaksh Kala,samaksh.kala@enterprise.com,+918488725639,Legal,Contracts Specialist,Radhika Handa,Bangalore,2023-02-24,Full-Time,62300.0,19100.0,766700.0,4.0,Male,28
+EMP0364,Maanav,Desai,Maanav Desai,maanav.desai@enterprise.com,08816580392,Human Resources,Senior HR Business Partner,Praneel Padmanabhan,Noida,2022-05-09,Full-Time,120200.0,20700.0,1463100.0,4.0,Male,30
+EMP0365,Yasti,Dey,Yasti Dey,yasti.dey@enterprise.com,02299275037,Operations,Process Improvement Lead,Hitesh Murty,Pune,2022-01-05,Full-Time,124900.0,30500.0,1529300.0,4.5,Female,28
+EMP0366,Jack,Bhatnagar,Jack Bhatnagar,jack.bhatnagar@enterprise.com,05303856770,Marketing,SEO Specialist,Rajata Gaba,Bangalore,2023-04-26,Full-Time,68300.0,11600.0,831200.0,3.5,Male,26
+EMP0367,Anmol,Naik,Anmol Naik,anmol.naik@enterprise.com,+918449892665,Finance,Tax Analyst,Liam Ahuja,Bangalore,2024-03-17,Full-Time,37200.0,15200.0,461600.0,4.5,Male,32
+EMP0368,Balvan,Varughese,Balvan Varughese,balvan.varughese@enterprise.com,06386557790,Human Resources,HR Operations Lead,Praneel Padmanabhan,Hyderabad,2022-08-18,Full-Time,101300.0,33700.0,1249300.0,4.5,Male,30
+EMP0369,Zashil,Dewan,Zashil Dewan,zashil.dewan@enterprise.com,02318432225,Finance,Financial Planning Lead,Liam Ahuja,Kolkata,2023-03-05,Full-Time,88000.0,31800.0,1087800.0,4.0,Male,34
+EMP0370,Daniel,Karpe,Daniel Karpe,daniel.karpe@enterprise.com,05177739260,Marketing,SEO Specialist,Rajata Gaba,Hyderabad,2019-02-14,Full-Time,54400.0,10000.0,662800.0,3.5,Male,31
+EMP0371,Jairaj,Bassi,Jairaj Bassi,jairaj.bassi@enterprise.com,+919922809202,Research & Development,R&D Lead,Upkaar Dara,Delhi,2022-10-21,Full-Time,128500.0,18800.0,1560800.0,3.5,Male,37
+EMP0372,Leela,Gole,Leela Gole,leela.gole@enterprise.com,6990413797,Legal,Contracts Specialist,Radhika Handa,Ahmedabad,2023-03-11,Full-Time,43800.0,10400.0,536000.0,3.5,Female,28
+EMP0373,Warda,Garde,Warda Garde,warda.garde@enterprise.com,+916929298425,IT Support,IT Support Specialist,Upadhriti Rastogi,Kolkata,2020-03-15,Full-Time,72100.0,17900.0,883100.0,3.5,Female,23
+EMP0374,Utkarsh,Biswas,Utkarsh Biswas,utkarsh.biswas@enterprise.com,+916621038862,Procurement,Senior Procurement Specialist,Nikita Khatri,Bangalore,2024-03-09,Full-Time,136900.0,29500.0,1672300.0,3.5,Male,28
+EMP0375,Chasmum,Goel,Chasmum Goel,chasmum.goel@enterprise.com,09908811729,Product Management,Product Operations Specialist,Ira Dua,Kolkata,2023-09-22,Full-Time,66700.0,9400.0,809800.0,3.0,Female,31
+EMP0376,Aachal,Sankar,Aachal Sankar,aachal.sankar@enterprise.com,6508637659,Customer Service,Senior Support Specialist,Azad Rajan,Mumbai,2024-05-08,Full-Time,133000.0,18500.0,1614500.0,4.5,Female,33
+EMP0377,Chandran,Sandal,Chandran Sandal,chandran.sandal@enterprise.com,+914731498643,Procurement,Buyer,Nikita Khatri,Bangalore,2025-07-01,Full-Time,41600.0,9000.0,508200.0,3.5,Male,29
+EMP0378,Aahana,Amble,Aahana Amble,aahana.amble@enterprise.com,8180635651,Operations,Supply Chain Analyst,Hitesh Murty,Chennai,2024-06-28,Contract,79000.0,9900.0,957900.0,4.0,Female,22
+EMP0379,Faras,Sandhu,Faras Sandhu,faras.sandhu@enterprise.com,9448695946,Operations,Supply Chain Analyst,Hitesh Murty,Kolkata,2022-07-21,Full-Time,55800.0,10600.0,680200.0,3.5,Male,23
+EMP0380,Ishani,Sachdev,Ishani Sachdev,ishani.sachdev@enterprise.com,8725887449,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Hyderabad,2019-09-08,Full-Time,52000.0,8400.0,632400.0,3.5,Female,24
+EMP0381,Pooja,Rao,Pooja Rao,pooja.rao@enterprise.com,2137213865,Data Science,Data Analyst,Daksh Memon,Ahmedabad,2023-05-17,Full-Time,70600.0,15800.0,863000.0,3.5,Female,28
+EMP0382,Atharv,Dyal,Atharv Dyal,atharv.dyal@enterprise.com,00127961143,Product Management,Associate Product Manager,Ira Dua,Mumbai,2018-08-18,Full-Time,58700.0,7400.0,711800.0,3.5,Male,24
+EMP0383,Qasim,Buch,Qasim Buch,qasim.buch@enterprise.com,0669849027,Customer Service,Customer Service Trainee,Azad Rajan,Ahmedabad,2019-11-30,Intern,33900.0,1900.0,408700.0,3.5,Male,22
+EMP0384,Urvashi,Anne,Urvashi Anne,urvashi.anne@enterprise.com,+918430988392,Data Science,ML Engineer,Daksh Memon,Ahmedabad,2024-09-09,Full-Time,98500.0,33100.0,1215100.0,4.0,Female,44
+EMP0385,Andrew,Parsa,Andrew Parsa,andrew.parsa@enterprise.com,+910214656693,Operations,Operations Executive,Hitesh Murty,Mumbai,2024-10-16,Full-Time,73000.0,12600.0,888600.0,3.0,Male,30
+EMP0386,Yochana,Aurora,Yochana Aurora,yochana.aurora@enterprise.com,1184895543,Research & Development,Research Associate,Upkaar Dara,Mumbai,2024-10-07,Full-Time,55200.0,6800.0,669200.0,4.0,Female,30
+EMP0387,Gunbir,Sha,Gunbir Sha,gunbir.sha@enterprise.com,09042681818,Research & Development,Research Trainee,Upkaar Dara,Hyderabad,2023-05-29,Intern,23400.0,4500.0,285300.0,4.0,Male,24
+EMP0388,Nandini,Oak,Nandini Oak,nandini.oak@enterprise.com,+918489476973,Sales,Inside Sales Associate,Ranveer Madan,Hyderabad,2018-12-10,Contract,34900.0,7000.0,425800.0,3.5,Female,31
+EMP0389,Pallavi,Shanker,Pallavi Shanker,pallavi.shanker@enterprise.com,7907141633,Marketing,Growth Marketing Lead,Rajata Gaba,Noida,2025-05-05,Full-Time,120500.0,17900.0,1463900.0,3.5,Female,28
+EMP0390,Nisha,Sachar,Nisha Sachar,nisha.sachar@enterprise.com,08804341651,Operations,Operations Executive,Hitesh Murty,Delhi,2024-11-11,Full-Time,42700.0,17800.0,530200.0,3.5,Female,31
+EMP0391,Hemal,Soni,Hemal Soni,hemal.soni@enterprise.com,05394237333,Administration,Facilities Lead,Daksh Bakshi,Noida,2026-04-02,Full-Time,97800.0,22700.0,1196300.0,3.0,Female,43
+EMP0392,Kevin,Jhaveri,Kevin Jhaveri,kevin.jhaveri@enterprise.com,+913395211179,Procurement,Category Specialist,Nikita Khatri,Kolkata,2024-11-20,Contract,95000.0,25000.0,1165000.0,4.0,Male,31
+EMP0393,Aarush,Basak,Aarush Basak,aarush.basak@enterprise.com,05957947284,Finance,Tax Analyst,Liam Ahuja,Pune,2018-09-20,Full-Time,71200.0,12100.0,866500.0,3.5,Male,23
+EMP0394,Sneha,Kapadia,Sneha Kapadia,sneha.kapadia@enterprise.com,2086780856,Human Resources,Payroll Executive,Praneel Padmanabhan,Mumbai,2025-03-07,Full-Time,60700.0,12800.0,741200.0,4.0,Female,28
+EMP0395,Gagan,Shankar,Gagan Shankar,gagan.shankar@enterprise.com,+918750036915,Legal,Legal Intern,Radhika Handa,Mumbai,2025-07-23,Intern,15700.0,3400.0,191800.0,3.0,Male,21
+EMP0396,Pratyush,Lad,Pratyush Lad,pratyush.lad@enterprise.com,+918434795527,Product Management,Product Manager,Ira Dua,Noida,2024-07-28,Full-Time,134600.0,23800.0,1639000.0,3.5,Male,36
+EMP0397,Simon,Kade,Simon Kade,simon.kade@enterprise.com,05564729293,Procurement,Procurement Executive,Nikita Khatri,Hyderabad,2024-10-19,Full-Time,75800.0,10200.0,919800.0,5.0,Male,30
+EMP0398,Daksha,Madan,Daksha Madan,daksha.madan@enterprise.com,+918663227026,Research & Development,Research Associate,Upkaar Dara,Delhi,2019-04-25,Full-Time,55300.0,13400.0,677000.0,4.5,Female,28
+EMP0399,Yahvi,Desai,Yahvi Desai,yahvi.desai@enterprise.com,8857448906,Research & Development,Innovation Engineer,Upkaar Dara,Delhi,2026-09-12,Full-Time,78300.0,13400.0,953000.0,4.0,Female,29
+EMP0400,Chavvi,Gade,Chavvi Gade,chavvi.gade@enterprise.com,+913471754558,Research & Development,Research Associate,Upkaar Dara,Hyderabad,2021-07-17,Full-Time,33400.0,14500.0,415300.0,3.5,Female,26
+EMP0401,Lavanya,Padmanabhan,Lavanya Padmanabhan,lavanya.padmanabhan@enterprise.com,+916159399824,Customer Service,Client Support Associate,Azad Rajan,Pune,2024-03-21,Full-Time,44400.0,11000.0,543800.0,4.5,Female,25
+EMP0402,Raagini,Nair,Raagini Nair,raagini.nair@enterprise.com,8771694722,Sales,Inside Sales Associate,Ranveer Madan,Hyderabad,2026-04-01,Full-Time,76500.0,7900.0,925900.0,3.5,Female,32
+EMP0403,Pahal,Sama,Pahal Sama,pahal.sama@enterprise.com,9961125355,Legal,Senior Legal Counsel,Radhika Handa,Ahmedabad,2024-11-19,Full-Time,90900.0,17700.0,1108500.0,3.0,Female,39
+EMP0404,Madhav,Loke,Madhav Loke,madhav.loke@enterprise.com,6475987622,Security,Cybersecurity Associate,Gayathri Lanka,Noida,2020-06-28,Full-Time,73400.0,12400.0,893200.0,4.0,Male,31
+EMP0405,Advay,Dass,Advay Dass,advay.dass@enterprise.com,3413261117,Engineering,Frontend Developer,Alexander Chander,Ahmedabad,2019-05-09,Full-Time,31600.0,10200.0,389400.0,4.0,Male,30
+EMP0406,Avni,Bal,Avni Bal,avni.bal@enterprise.com,08114921643,Sales,Sales Executive,Ranveer Madan,Mumbai,2024-02-25,Full-Time,59100.0,9900.0,719100.0,3.5,Female,28
+EMP0407,Krishna,Mander,Krishna Mander,krishna.mander@enterprise.com,02282005577,IT Support,Helpdesk Trainee,Upadhriti Rastogi,Delhi,2022-02-04,Intern,18700.0,2700.0,227100.0,4.5,Female,22
+EMP0408,Madhavi,Saxena,Madhavi Saxena,madhavi.saxena@enterprise.com,+918299796884,IT Support,Senior Systems Engineer,Upadhriti Rastogi,Kolkata,2022-11-06,Contract,137000.0,33000.0,1677000.0,4.5,Female,35
+EMP0409,Oscar,Subramaniam,Oscar Subramaniam,oscar.subramaniam@enterprise.com,3174564240,Finance,Tax Analyst,Liam Ahuja,Ahmedabad,2021-05-13,Full-Time,38800.0,12500.0,478100.0,3.5,Male,22
+EMP0410,Aadi,Virk,Aadi Virk,aadi.virk@enterprise.com,+915478077406,Operations,Senior Operations Specialist,Hitesh Murty,Delhi,2020-11-30,Full-Time,113400.0,30700.0,1391500.0,3.5,Male,36
+EMP0411,Mugdha,Kashyap,Mugdha Kashyap,mugdha.kashyap@enterprise.com,+918536866326,Sales,Senior Account Executive,Ranveer Madan,Chennai,2021-12-25,Full-Time,120400.0,31200.0,1476000.0,3.5,Female,34
+EMP0412,Saanvi,Kannan,Saanvi Kannan,saanvi.kannan@enterprise.com,01638944846,Administration,Administrative Executive,Daksh Bakshi,Delhi,2022-09-24,Full-Time,53200.0,19300.0,657700.0,4.0,Female,26
+EMP0413,Ijaya,Biswas,Ijaya Biswas,ijaya.biswas@enterprise.com,+912417974973,Security,Security Intern,Gayathri Lanka,Chennai,2024-10-15,Intern,21900.0,2300.0,265100.0,4.0,Female,21
+EMP0414,Oeshi,Bahl,Oeshi Bahl,oeshi.bahl@enterprise.com,+910802144270,Research & Development,Lab Specialist,Upkaar Dara,Bangalore,2019-05-28,Full-Time,78300.0,11200.0,950800.0,4.0,Female,30
+EMP0415,Kamala,Chana,Kamala Chana,kamala.chana@enterprise.com,+910735647570,Procurement,Procurement Executive,Nikita Khatri,Kolkata,2018-08-09,Full-Time,35200.0,6000.0,428400.0,3.0,Female,28
+EMP0416,Oni,Buch,Oni Buch,oni.buch@enterprise.com,+910461872346,Customer Service,Customer Service Executive,Azad Rajan,Chennai,2020-07-28,Full-Time,37800.0,14800.0,468400.0,3.5,Female,31
+EMP0417,Abha,Dara,Abha Dara,abha.dara@enterprise.com,3673037183,IT Support,IT Support Specialist,Upadhriti Rastogi,Ahmedabad,2023-03-29,Full-Time,31400.0,15000.0,391800.0,5.0,Female,24
+EMP0418,Vritti,Ramachandran,Vritti Ramachandran,vritti.ramachandran@enterprise.com,4520881474,Customer Service,Client Support Associate,Azad Rajan,Kolkata,2025-03-05,Full-Time,59900.0,14500.0,733300.0,4.0,Female,31
+EMP0419,Ira,Patel,Ira Patel,ira.patel@enterprise.com,+913136502491,Research & Development,Principal Innovator,Upkaar Dara,Mumbai,2021-05-28,Full-Time,110900.0,24100.0,1354900.0,3.0,Female,30
+EMP0420,Rudra,Kibe,Rudra Kibe,rudra.kibe@enterprise.com,+910979251327,Sales,Strategic Enterprise Account Lead,Ranveer Madan,Noida,2021-04-14,Full-Time,146300.0,26900.0,1782500.0,4.0,Male,43
+EMP0421,Chakradev,Nigam,Chakradev Nigam,chakradev.nigam@enterprise.com,0052812735,Customer Service,Customer Support Specialist,Azad Rajan,Noida,2020-06-22,Contract,49700.0,7400.0,603800.0,3.5,Male,28
+EMP0422,Prisha,Sarna,Prisha Sarna,prisha.sarna@enterprise.com,3065240778,Product Management,Product Strategy Lead,Ira Dua,Noida,2020-02-10,Full-Time,99900.0,33600.0,1232400.0,4.5,Female,36
+EMP0423,Manan,Suri,Manan Suri,manan.suri@enterprise.com,+919285574982,Finance,Financial Planning Lead,Liam Ahuja,Delhi,2018-03-21,Full-Time,99000.0,30600.0,1218600.0,3.5,Male,42
+EMP0424,Bakhshi,Wali,Bakhshi Wali,bakhshi.wali@enterprise.com,+917448570862,Finance,Accounts Trainee,Liam Ahuja,Hyderabad,2019-01-05,Intern,17500.0,2800.0,212800.0,3.5,Male,22
+EMP0425,Adya,Patla,Adya Patla,adya.patla@enterprise.com,3518638782,Legal,Senior Compliance Specialist,Radhika Handa,Delhi,2018-11-25,Full-Time,149900.0,26600.0,1825400.0,4.5,Female,43
+EMP0426,Lohit,Naidu,Lohit Naidu,lohit.naidu@enterprise.com,05118102203,Engineering,Backend Lead,Alexander Chander,Noida,2018-02-21,Full-Time,92700.0,37400.0,1149800.0,3.0,Male,43
+EMP0427,Chatresh,Sunder,Chatresh Sunder,chatresh.sunder@enterprise.com,+911096789940,Operations,Supply Chain Analyst,Hitesh Murty,Kolkata,2025-06-20,Full-Time,40000.0,16000.0,496000.0,5.0,Male,22
+EMP0428,Rajeshri,Kant,Rajeshri Kant,rajeshri.kant@enterprise.com,1037170586,Operations,Supply Chain Analyst,Hitesh Murty,Chennai,2023-05-26,Contract,61500.0,5600.0,743600.0,4.0,Female,24
+EMP0429,Qarin,Bhardwaj,Qarin Bhardwaj,qarin.bhardwaj@enterprise.com,4801413811,Sales,Sales Intern,Ranveer Madan,Mumbai,2021-02-04,Intern,19700.0,2700.0,239100.0,4.0,Male,20
+EMP0430,Kala,Wali,Kala Wali,kala.wali@enterprise.com,03383928861,Administration,Senior Admin Coordinator,Daksh Bakshi,Hyderabad,2019-10-08,Full-Time,128200.0,18900.0,1557300.0,4.0,Female,43
+EMP0431,Rachita,Shanker,Rachita Shanker,rachita.shanker@enterprise.com,6122868528,Research & Development,R&D Intern,Upkaar Dara,Mumbai,2023-06-22,Intern,22100.0,1600.0,266800.0,3.5,Female,20
+EMP0432,Vaishnavi,Pandey,Vaishnavi Pandey,vaishnavi.pandey@enterprise.com,08556659398,Administration,Admin Intern,Daksh Bakshi,Chennai,2018-06-11,Intern,28800.0,2400.0,348000.0,4.0,Female,20
+EMP0433,Jalsa,Prashad,Jalsa Prashad,jalsa.prashad@enterprise.com,4577600490,Customer Service,Escalation Specialist,Azad Rajan,Chennai,2024-09-18,Full-Time,118100.0,23100.0,1440300.0,4.5,Female,33
+EMP0434,Ekansh,Mittal,Ekansh Mittal,ekansh.mittal@enterprise.com,+914335048889,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Mumbai,2018-03-18,Full-Time,57100.0,11800.0,697000.0,4.0,Male,26
+EMP0435,Garima,Chandra,Garima Chandra,garima.chandra@enterprise.com,+917522459334,Administration,Facilities Officer,Daksh Bakshi,Kolkata,2025-08-30,Full-Time,78400.0,17300.0,958100.0,4.0,Female,32
+EMP0436,Mason,Chanda,Mason Chanda,mason.chanda@enterprise.com,6931572791,Data Science,AI Research Scientist,Daksh Memon,Mumbai,2020-01-02,Full-Time,86700.0,31500.0,1071900.0,4.5,Male,31
+EMP0437,Mason,Barad,Mason Barad,mason.barad@enterprise.com,9610556613,Human Resources,HR Executive,Praneel Padmanabhan,Bangalore,2022-02-09,Full-Time,71800.0,14900.0,876500.0,3.5,Male,32
+EMP0438,Abdul,Raja,Abdul Raja,abdul.raja@enterprise.com,+914805892583,Engineering,Software Engineering Intern,Alexander Chander,Bangalore,2022-01-18,Intern,33600.0,4300.0,407500.0,4.0,Male,23
+EMP0439,Ganga,Bedi,Ganga Bedi,ganga.bedi@enterprise.com,6799813646,Security,Cybersecurity Associate,Gayathri Lanka,Chennai,2018-11-16,Full-Time,43300.0,5600.0,525200.0,4.5,Female,31
+EMP0440,Ethan,Deo,Ethan Deo,ethan.deo@enterprise.com,01790864168,Human Resources,Payroll Executive,Praneel Padmanabhan,Kolkata,2026-05-27,Full-Time,56300.0,8700.0,684300.0,4.0,Male,25
+EMP0441,Teerth,De,Teerth De,teerth.de@enterprise.com,+917837693898,Administration,Facilities Officer,Daksh Bakshi,Kolkata,2022-07-03,Full-Time,51400.0,6600.0,623400.0,4.0,Male,32
+EMP0442,Jatin,Kibe,Jatin Kibe,jatin.kibe@enterprise.com,+914659116655,Customer Service,Customer Service Trainee,Azad Rajan,Delhi,2022-08-16,Intern,33000.0,3200.0,399200.0,4.0,Male,22
+EMP0443,Ikshita,Nagi,Ikshita Nagi,ikshita.nagi@enterprise.com,09042597927,Security,Cybersecurity Associate,Gayathri Lanka,Delhi,2023-01-28,Full-Time,40700.0,16500.0,504900.0,3.5,Female,30
+EMP0444,Anya,Kaur,Anya Kaur,anya.kaur@enterprise.com,+915211039240,Engineering,DevOps Engineer,Alexander Chander,Chennai,2020-06-27,Full-Time,36800.0,18400.0,460000.0,3.5,Female,30
+EMP0445,Pavani,Choudhry,Pavani Choudhry,pavani.choudhry@enterprise.com,07705383388,Engineering,DevOps Engineer,Alexander Chander,Pune,2018-06-04,Contract,57800.0,18900.0,712500.0,4.0,Female,30
+EMP0446,Kai,Subramanian,Kai Subramanian,kai.subramanian@enterprise.com,2069804204,Finance,Financial Planning Lead,Liam Ahuja,Hyderabad,2026-03-27,Full-Time,136800.0,17300.0,1658900.0,3.0,Male,36
+EMP0447,Irya,Madan,Irya Madan,irya.madan@enterprise.com,+917016451046,Administration,Facilities Officer,Daksh Bakshi,Bangalore,2026-03-13,Full-Time,71000.0,6400.0,858400.0,4.5,Female,31
+EMP0448,Kala,Rai,Kala Rai,kala.rai@enterprise.com,1579812387,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Bangalore,2025-02-09,Full-Time,50800.0,18000.0,627600.0,4.0,Female,28
+EMP0449,Alka,Baral,Alka Baral,alka.baral@enterprise.com,+918457620555,Engineering,Senior Engineer,Alexander Chander,Bangalore,2025-07-22,Full-Time,102900.0,32400.0,1267200.0,4.0,Female,32
+EMP0450,Nidhi,Keer,Nidhi Keer,nidhi.keer@enterprise.com,4046084325,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Mumbai,2021-10-08,Full-Time,51600.0,16800.0,636000.0,3.0,Female,25
+EMP0451,Ronith,Devan,Ronith Devan,ronith.devan@enterprise.com,+916893639264,Customer Service,Customer Service Executive,Azad Rajan,Ahmedabad,2024-04-09,Full-Time,68700.0,7000.0,831400.0,3.5,Male,28
+EMP0452,Omya,Sen,Omya Sen,omya.sen@enterprise.com,2329832482,Product Management,Associate Product Manager,Ira Dua,Pune,2025-07-14,Full-Time,68800.0,9900.0,835500.0,3.5,Female,26
+EMP0453,Upasna,Dhillon,Upasna Dhillon,upasna.dhillon@enterprise.com,9251881252,Sales,Regional Sales Lead,Ranveer Madan,Ahmedabad,2024-12-27,Full-Time,133900.0,19200.0,1626000.0,3.0,Female,28
+EMP0454,Alexander,Nagar,Alexander Nagar,alexander.nagar@enterprise.com,06474231220,Research & Development,Research Associate,Upkaar Dara,Bangalore,2020-09-22,Full-Time,67900.0,17800.0,832600.0,4.5,Male,24
+EMP0455,Kiaan,Kashyap,Kiaan Kashyap,kiaan.kashyap@enterprise.com,3305172897,Security,Information Security Officer,Gayathri Lanka,Hyderabad,2026-04-20,Full-Time,45300.0,12100.0,555700.0,4.0,Male,23
+EMP0456,Rachit,Gour,Rachit Gour,rachit.gour@enterprise.com,07722330604,Customer Service,Customer Support Specialist,Azad Rajan,Noida,2024-07-15,Full-Time,66500.0,7100.0,805100.0,4.5,Male,31
+EMP0457,Samuel,Kapadia,Samuel Kapadia,samuel.kapadia@enterprise.com,3312797573,Marketing,Brand Lead,Rajata Gaba,Pune,2022-05-11,Full-Time,83700.0,31400.0,1035800.0,4.0,Male,36
+EMP0458,Unni,Ravel,Unni Ravel,unni.ravel@enterprise.com,+919656999880,Security,Threat Hunter,Gayathri Lanka,Delhi,2023-06-09,Full-Time,96200.0,24500.0,1178900.0,4.5,Female,40
+EMP0459,Chatura,Seth,Chatura Seth,chatura.seth@enterprise.com,00388608680,Finance,Senior Auditor,Liam Ahuja,Delhi,2023-06-30,Full-Time,82800.0,38100.0,1031700.0,3.5,Male,28
+EMP0460,Girish,Manne,Girish Manne,girish.manne@enterprise.com,06447264908,Engineering,Tech Lead,Alexander Chander,Bangalore,2025-01-07,Full-Time,96500.0,39500.0,1197500.0,3.5,Male,37
+EMP0461,Ekta,Sheth,Ekta Sheth,ekta.sheth@enterprise.com,7181298266,Research & Development,R&D Intern,Upkaar Dara,Noida,2025-05-14,Intern,34000.0,1900.0,409900.0,3.0,Female,24
+EMP0462,Ojasvi,Seshadri,Ojasvi Seshadri,ojasvi.seshadri@enterprise.com,+912793714521,Customer Service,Customer Service Trainee,Azad Rajan,Delhi,2023-01-14,Intern,19800.0,1600.0,239200.0,4.0,Female,23
+EMP0463,Chakradev,Comar,Chakradev Comar,chakradev.comar@enterprise.com,7518689268,Product Management,Product Strategy Lead,Ira Dua,Noida,2026-08-21,Full-Time,140400.0,22700.0,1707500.0,3.0,Male,34
+EMP0464,Ranveer,Bassi,Ranveer Bassi,ranveer.bassi@enterprise.com,+915922220644,Sales,Strategic Enterprise Account Lead,Ranveer Madan,Bangalore,2026-08-02,Contract,92900.0,36000.0,1150800.0,3.5,Male,31
+EMP0465,Vansha,Mani,Vansha Mani,vansha.mani@enterprise.com,2123094077,Operations,Supply Chain Lead,Hitesh Murty,Mumbai,2018-04-18,Contract,90600.0,19700.0,1106900.0,4.0,Female,36
+EMP0466,Yahvi,Ahluwalia,Yahvi Ahluwalia,yahvi.ahluwalia@enterprise.com,7339776719,Data Science,Data Analyst,Daksh Memon,Mumbai,2023-08-20,Full-Time,64400.0,10400.0,783200.0,4.5,Female,25
+EMP0467,Aarini,Konda,Aarini Konda,aarini.konda@enterprise.com,4983022050,Procurement,Procurement Executive,Nikita Khatri,Bangalore,2022-08-01,Full-Time,53700.0,7500.0,651900.0,4.0,Female,29
+EMP0468,Elijah,Bali,Elijah Bali,elijah.bali@enterprise.com,9945101622,Research & Development,R&D Lead,Upkaar Dara,Ahmedabad,2025-09-18,Full-Time,133000.0,16700.0,1612700.0,3.5,Male,34
+EMP0469,Meghana,Goel,Meghana Goel,meghana.goel@enterprise.com,09501455616,Research & Development,R&D Lead,Upkaar Dara,Kolkata,2019-03-24,Full-Time,130400.0,24900.0,1589700.0,4.0,Female,40
+EMP0470,Bachittar,Master,Bachittar Master,bachittar.master@enterprise.com,02145868339,Research & Development,Research Trainee,Upkaar Dara,Hyderabad,2021-04-07,Intern,26200.0,3100.0,317500.0,3.5,Male,20
+EMP0471,Barkha,Chopra,Barkha Chopra,barkha.chopra@enterprise.com,8179469548,Administration,Facilities Officer,Daksh Bakshi,Ahmedabad,2025-03-31,Full-Time,60700.0,5800.0,734200.0,4.0,Female,26
+EMP0472,Peter,Dayal,Peter Dayal,peter.dayal@enterprise.com,9787729343,Finance,Tax Analyst,Liam Ahuja,Ahmedabad,2024-08-14,Full-Time,50700.0,11800.0,620200.0,4.5,Male,28
+EMP0473,Aadi,Dani,Aadi Dani,aadi.dani@enterprise.com,+917139660558,Research & Development,Lab Specialist,Upkaar Dara,Pune,2019-04-13,Full-Time,75400.0,16900.0,921700.0,4.0,Male,32
+EMP0474,Jagvi,Apte,Jagvi Apte,jagvi.apte@enterprise.com,3441448850,Human Resources,Talent Acquisition Specialist,Praneel Padmanabhan,Bangalore,2026-08-13,Full-Time,60600.0,7400.0,734600.0,3.5,Female,30
+EMP0475,Deepa,Nath,Deepa Nath,deepa.nath@enterprise.com,06990235577,Data Science,Data Science Intern,Daksh Memon,Noida,2021-06-15,Intern,32400.0,1700.0,390500.0,3.5,Female,21
+EMP0476,Anita,Deshpande,Anita Deshpande,anita.deshpande@enterprise.com,02785760849,Marketing,Marketing Executive,Rajata Gaba,Ahmedabad,2023-08-01,Contract,30200.0,16500.0,378900.0,4.5,Female,25
+EMP0477,Nakul,Wason,Nakul Wason,nakul.wason@enterprise.com,+913955124056,Data Science,Data Science Intern,Daksh Memon,Ahmedabad,2018-11-22,Intern,26800.0,2900.0,324500.0,4.0,Male,21
+EMP0478,Fitan,Ramachandran,Fitan Ramachandran,fitan.ramachandran@enterprise.com,+919145046173,Legal,Legal Intern,Radhika Handa,Bangalore,2020-01-28,Intern,27600.0,4300.0,335500.0,3.0,Male,24
+EMP0479,Ria,Seth,Ria Seth,ria.seth@enterprise.com,03842150317,Engineering,Senior Engineer,Alexander Chander,Noida,2020-01-01,Full-Time,103200.0,17200.0,1255600.0,3.5,Female,37
+EMP0480,Yashica,Bakshi,Yashica Bakshi,yashica.bakshi@enterprise.com,08235784521,Data Science,Associate Data Scientist,Daksh Memon,Bangalore,2019-01-17,Full-Time,38900.0,11800.0,478600.0,4.0,Female,30
+EMP0481,Yauvani,Deo,Yauvani Deo,yauvani.deo@enterprise.com,+910768104091,Sales,Sales Intern,Ranveer Madan,Mumbai,2019-05-15,Intern,31900.0,1300.0,384100.0,4.0,Female,23
+EMP0482,Osha,Sibal,Osha Sibal,osha.sibal@enterprise.com,+911840943533,Sales,Inside Sales Associate,Ranveer Madan,Ahmedabad,2026-02-13,Full-Time,60600.0,6600.0,733800.0,4.0,Female,25
+EMP0483,Mekhala,Malhotra,Mekhala Malhotra,mekhala.malhotra@enterprise.com,5714224109,Operations,Supply Chain Analyst,Hitesh Murty,Ahmedabad,2023-10-30,Full-Time,79800.0,10300.0,967900.0,4.0,Female,31
+EMP0484,Yasti,Chaudry,Yasti Chaudry,yasti.chaudry@enterprise.com,+918585424932,IT Support,Desktop Support Engineer,Upadhriti Rastogi,Ahmedabad,2025-01-05,Full-Time,79000.0,5000.0,953000.0,4.0,Female,26
+EMP0485,Balendra,Mukhopadhyay,Balendra Mukhopadhyay,balendra.mukhopadhyay@enterprise.com,5870207016,Administration,Facilities Officer,Daksh Bakshi,Bangalore,2025-03-08,Full-Time,47500.0,17100.0,587100.0,3.5,Male,27
+EMP0486,Avni,Chadha,Avni Chadha,avni.chadha@enterprise.com,06299795453,Marketing,SEO Specialist,Rajata Gaba,Delhi,2022-06-11,Full-Time,46200.0,5100.0,559500.0,4.0,Female,30
+EMP0487,Balveer,Shroff,Balveer Shroff,balveer.shroff@enterprise.com,2171747733,Security,Threat Hunter,Gayathri Lanka,Ahmedabad,2019-09-29,Full-Time,144100.0,34900.0,1764100.0,4.0,Male,43
+EMP0488,Eshana,Kuruvilla,Eshana Kuruvilla,eshana.kuruvilla@enterprise.com,06255770171,IT Support,System Administrator,Upadhriti Rastogi,Kolkata,2024-01-04,Contract,71800.0,9500.0,871100.0,3.0,Female,22
+EMP0489,Pushti,Srinivas,Pushti Srinivas,pushti.srinivas@enterprise.com,02459928161,Administration,Admin Intern,Daksh Bakshi,Delhi,2022-03-17,Intern,34400.0,2100.0,414900.0,4.0,Female,20
+EMP0490,Nicholas,Bobal,Nicholas Bobal,nicholas.bobal@enterprise.com,08769639382,Data Science,Data Analyst,Daksh Memon,Chennai,2022-08-23,Full-Time,65300.0,9700.0,793300.0,3.0,Male,26
+EMP0491,Wridesh,Rajagopalan,Wridesh Rajagopalan,wridesh.rajagopalan@enterprise.com,+915396695832,Sales,Business Development Representative,Ranveer Madan,Hyderabad,2019-01-15,Full-Time,38800.0,10600.0,476200.0,3.5,Male,26
+EMP0492,Balvan,Sur,Balvan Sur,balvan.sur@enterprise.com,+919975817246,Administration,Office Coordinator,Daksh Bakshi,Delhi,2019-08-10,Full-Time,76200.0,16000.0,930400.0,4.0,Male,27
+EMP0493,Bakhshi,Chopra,Bakhshi Chopra,bakhshi.chopra@enterprise.com,9657013290,Security,Security Intern,Gayathri Lanka,Bangalore,2021-06-27,Intern,29500.0,2800.0,356800.0,4.5,Male,21
+EMP0494,Ethan,Dixit,Ethan Dixit,ethan.dixit@enterprise.com,08469973354,Sales,Sales Executive,Ranveer Madan,Hyderabad,2021-08-07,Full-Time,67300.0,5300.0,812900.0,3.5,Male,32
+EMP0495,Nidra,Saran,Nidra Saran,nidra.saran@enterprise.com,5190986240,Marketing,Social Media Executive,Rajata Gaba,Kolkata,2023-10-07,Full-Time,37500.0,9100.0,459100.0,3.0,Female,26
+EMP0496,Reva,Bera,Reva Bera,reva.bera@enterprise.com,+918514036965,Customer Service,Senior Support Specialist,Azad Rajan,Delhi,2024-01-24,Contract,120200.0,19300.0,1461700.0,3.5,Female,37
+EMP0497,Rayaan,Ravi,Rayaan Ravi,rayaan.ravi@enterprise.com,06832723865,Engineering,Software Engineer,Alexander Chander,Delhi,2021-07-03,Full-Time,34300.0,10900.0,422500.0,3.5,Male,22
+EMP0498,Sathvik,Dube,Sathvik Dube,sathvik.dube@enterprise.com,02201027621,Procurement,Vendor Relations Associate,Nikita Khatri,Pune,2023-02-10,Full-Time,58400.0,6400.0,707200.0,3.5,Male,29
+EMP0499,Ekantika,Sagar,Ekantika Sagar,ekantika.sagar@enterprise.com,09692786876,IT Support,Senior Systems Engineer,Upadhriti Rastogi,Delhi,2023-01-31,Full-Time,143900.0,24800.0,1751600.0,4.0,Female,36
+EMP0500,Peter,Kara,Peter Kara,peter.kara@enterprise.com,+916909738468,IT Support,Network Infrastructure Lead,Upadhriti Rastogi,Kolkata,2019-02-26,Full-Time,99800.0,23700.0,1221300.0,3.5,Male,33

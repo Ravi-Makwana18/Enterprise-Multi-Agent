@@ -8,3 +8,10 @@ pydantic
 python-dotenv
 requests
 sqlalchemy
+aiofiles
+chromadb
+pypdf
+python-docx
+pandas
+faker
+

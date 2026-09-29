@@ -1,0 +1,264 @@
+{
+  "widgets": [
+    {
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 1,
+      "properties": {
+        "markdown": "# Enterprise Multi-Agent Platform — Operations Dashboard\nMonitoring: API Health · Agent Workflows · LLM Latency · Error Rates"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 1,
+      "width": 6,
+      "height": 6,
+      "properties": {
+        "title": "Request Count by Endpoint",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/ApplicationELB", "RequestCount", "LoadBalancer", "enterprise-multi-agent-alb", {"label": "Total Requests", "color": "#2ca02c"}]
+        ],
+        "period": 60,
+        "stat": "Sum",
+        "region": "us-east-1"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 6,
+      "y": 1,
+      "width": 6,
+      "height": 6,
+      "properties": {
+        "title": "HTTP 5xx Error Rate",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/ApplicationELB", "HTTPCode_Target_5XX_Count", "LoadBalancer", "enterprise-multi-agent-alb", {"label": "5xx Errors", "color": "#d62728"}]
+        ],
+        "period": 60,
+        "stat": "Sum",
+        "region": "us-east-1",
+        "annotations": {
+          "horizontal": [
+            {
+              "label": "Alert Threshold",
+              "value": 10,
+              "color": "#ff7f0e"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 1,
+      "width": 6,
+      "height": 6,
+      "properties": {
+        "title": "p95 Response Latency (ms)",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/ApplicationELB", "TargetResponseTime", "LoadBalancer", "enterprise-multi-agent-alb", {"label": "p95 Latency", "stat": "p95", "color": "#9467bd"}]
+        ],
+        "period": 60,
+        "stat": "p95",
+        "region": "us-east-1",
+        "annotations": {
+          "horizontal": [
+            {
+              "label": "3s Threshold",
+              "value": 3.0,
+              "color": "#ff7f0e"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "metric",
+      "x": 18,
+      "y": 1,
+      "width": 6,
+      "height": 6,
+      "properties": {
+        "title": "HTTP 4xx Client Errors",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/ApplicationELB", "HTTPCode_Target_4XX_Count", "LoadBalancer", "enterprise-multi-agent-alb", {"label": "4xx Errors", "color": "#e377c2"}]
+        ],
+        "period": 60,
+        "stat": "Sum",
+        "region": "us-east-1"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 7,
+      "width": 8,
+      "height": 6,
+      "properties": {
+        "title": "ECS CPU Utilization",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/ECS", "CPUUtilization", "ServiceName", "enterprise-multi-agent-production", "ClusterName", "enterprise-multi-agent-production", {"label": "CPU %", "color": "#1f77b4"}]
+        ],
+        "period": 60,
+        "stat": "Average",
+        "region": "us-east-1",
+        "annotations": {
+          "horizontal": [
+            {
+              "label": "Scale-Out at 70%",
+              "value": 70,
+              "color": "#ff7f0e"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "metric",
+      "x": 8,
+      "y": 7,
+      "width": 8,
+      "height": 6,
+      "properties": {
+        "title": "ECS Memory Utilization",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/ECS", "MemoryUtilization", "ServiceName", "enterprise-multi-agent-production", "ClusterName", "enterprise-multi-agent-production", {"label": "Memory %", "color": "#ff7f0e"}]
+        ],
+        "period": 60,
+        "stat": "Average",
+        "region": "us-east-1"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 16,
+      "y": 7,
+      "width": 8,
+      "height": 6,
+      "properties": {
+        "title": "Healthy vs Unhealthy Targets",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/ApplicationELB", "HealthyHostCount", "LoadBalancer", "enterprise-multi-agent-alb", {"label": "Healthy", "color": "#2ca02c"}],
+          ["AWS/ApplicationELB", "UnHealthyHostCount", "LoadBalancer", "enterprise-multi-agent-alb", {"label": "Unhealthy", "color": "#d62728"}]
+        ],
+        "period": 60,
+        "stat": "Average",
+        "region": "us-east-1"
+      }
+    },
+    {
+      "type": "log",
+      "x": 0,
+      "y": 13,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Recent Agent Route Decisions",
+        "query": "SOURCE '/ecs/enterprise-multi-agent/production' | fields @timestamp, @message | filter @message like 'routed' | sort @timestamp desc | limit 20",
+        "region": "us-east-1",
+        "view": "table"
+      }
+    },
+    {
+      "type": "log",
+      "x": 12,
+      "y": 13,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Error & Exception Log",
+        "query": "SOURCE '/ecs/enterprise-multi-agent/production' | fields @timestamp, @message | filter @message like 'ERROR' or @message like 'exception' or @message like 'failed' | sort @timestamp desc | limit 20",
+        "region": "us-east-1",
+        "view": "table"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 19,
+      "width": 8,
+      "height": 6,
+      "properties": {
+        "title": "Bedrock Invocation Count",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/Bedrock", "Invocations", "ModelId", "anthropic.claude-3-sonnet-20240229-v1:0", {"label": "Claude 3 Sonnet", "color": "#8c564b"}],
+          ["AWS/Bedrock", "Invocations", "ModelId", "amazon.nova-lite-v1:0", {"label": "Nova Lite (Router)", "color": "#7f7f7f"}]
+        ],
+        "period": 300,
+        "stat": "Sum",
+        "region": "us-east-1"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 8,
+      "y": 19,
+      "width": 8,
+      "height": 6,
+      "properties": {
+        "title": "Bedrock Invocation Latency (ms)",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/Bedrock", "InvocationLatency", "ModelId", "anthropic.claude-3-sonnet-20240229-v1:0", {"label": "Claude 3 Sonnet p95", "stat": "p95"}]
+        ],
+        "period": 300,
+        "stat": "p95",
+        "region": "us-east-1"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 16,
+      "y": 19,
+      "width": 8,
+      "height": 6,
+      "properties": {
+        "title": "Bedrock Error Count",
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+          ["AWS/Bedrock", "InvocationClientErrors", "ModelId", "anthropic.claude-3-sonnet-20240229-v1:0", {"label": "Client Errors", "color": "#d62728"}],
+          ["AWS/Bedrock", "InvocationServerErrors", "ModelId", "anthropic.claude-3-sonnet-20240229-v1:0", {"label": "Server Errors", "color": "#ff7f0e"}]
+        ],
+        "period": 300,
+        "stat": "Sum",
+        "region": "us-east-1"
+      }
+    },
+    {
+      "type": "alarm",
+      "x": 0,
+      "y": 25,
+      "width": 24,
+      "height": 4,
+      "properties": {
+        "title": "Active Alarms",
+        "alarms": [
+          "arn:aws:cloudwatch:us-east-1:ACCOUNT_ID:alarm:enterprise-multi-agent-high-error-rate",
+          "arn:aws:cloudwatch:us-east-1:ACCOUNT_ID:alarm:enterprise-multi-agent-high-latency"
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from typing import Any
 
 from dotenv import load_dotenv
 from pydantic import BaseModel
@@ -55,12 +54,9 @@ class Settings(BaseModel):
     rate_limit_requests_per_minute: int = int(os.getenv("RATE_LIMIT_REQUESTS_PER_MINUTE", "60"))
     database_url: str = os.getenv("DATABASE_URL", "sqlite:///./enterprise_multi_agent.db")
     database_echo: bool = _get_bool_env("DATABASE_ECHO", False)
-    s3_bucket_name: str | None = os.getenv("S3_BUCKET_NAME")
-    s3_prefix: str = os.getenv("S3_PREFIX", "enterprise-multi-agent")
-    dynamodb_table_name: str | None = os.getenv("DYNAMODB_TABLE_NAME")
-    dynamodb_region: str = os.getenv("DYNAMODB_REGION", os.getenv("AWS_REGION", "us-east-1"))
     huggingface_api_token: str | None = os.getenv("HUGGINGFACE_API_TOKEN")
     groq_api_key: str | None = os.getenv("GROQ_API_KEY")
+    groq_model: str = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
     llm_provider: str = os.getenv("LLM_PROVIDER", "groq")
 
 

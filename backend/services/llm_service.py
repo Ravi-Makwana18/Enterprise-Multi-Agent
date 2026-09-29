@@ -44,8 +44,14 @@ def generate_text(prompt: str, model_key: str = "default", system_prompt: str | 
     if provider == "huggingface":
         from backend.services.huggingface_service import generate_text as hf_text
         return hf_text(prompt, model_key, system_prompt)
-    from backend.services.groq_service import generate_text as groq_text
-    return groq_text(prompt, model_key, system_prompt)
+    # Default: Groq — fall back gracefully if key is not configured
+    try:
+        from backend.services.groq_service import generate_text as groq_text
+        return groq_text(prompt, model_key, system_prompt)
+    except Exception:
+        from backend.services.groq_service import _local_fallback
+        return _local_fallback(model_key, prompt).get("message", "Request processed.")
+
 
 
 def _bedrock(prompt: str, model_key: str) -> dict[str, Any]:

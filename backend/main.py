@@ -1,37 +1,55 @@
 import json
 import logging
-import os
 import time
 import uuid
 from collections import defaultdict, deque
 from pathlib import Path
 
-from fastapi import Depends, FastAPI, HTTPException, Request
+from fastapi import Depends, FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from backend.config import settings
+from backend.services.document_parser_service import parse_document
 from backend.core.audit import log_audit
-from backend.core.auth import require_roles
+from backend.core.auth import issue_admin_token, issue_employee_token, require_roles
 from backend.core.exceptions import AppError, error_payload
 from backend.core.logging import configure_logging
 from backend.core.observability import generate_trace_id, metrics_registry
 from backend.core.pii import redact_pii
 from backend.db import initialize_database
-from backend.models.request import UserRequest
+from backend.models.request import LoginRequest, UserRequest
 from backend.models.response import ChatResponse, DiagnosticResponse, HealthResponse
+from backend.services.chat_history_service import (
+    delete_chat_session,
+    get_chat_session_history,
+    list_chat_sessions,
+    record_chat_interaction,
+)
 from backend.services.employee_service import create_employee, get_employee, list_employees
-from backend.services.review_service import create_review, list_reviews
 from backend.services.security_check_service import create_security_check, list_security_checks
-from backend.services.ticket_service import create_ticket, get_ticket, list_tickets
 from backend.services.user_action_service import create_user_action, list_user_actions
 from backend.services.workflow_state_service import get_workflow_state, list_workflow_states, save_workflow_state
 from backend.workflows.langgraph_orchestrator import graph
 
 configure_logging()
 initialize_database()
+
+try:
+    from backend.services.employee_service import seed_default_employees
+    seed_default_employees()
+except Exception as _e_exc:
+    logging.getLogger(__name__).warning("Employee seeding skipped or deferred: %s", _e_exc)
+
+
+try:
+    from backend.services.vector_store_service import seed_default_knowledge
+    seed_default_knowledge()
+except Exception as _v_exc:
+    logging.getLogger(__name__).warning("Vector store init skipped or deferred: %s", _v_exc)
+
 logger = logging.getLogger(__name__)
 startup_time = time.time()
 rate_limit_store = defaultdict(deque)
@@ -175,6 +193,87 @@ def create_app() -> FastAPI:
             },
         )
 
+    @app.post("/auth/login")
+    def login(req: LoginRequest):
+        identifier = (req.employee_id or req.username or "").strip()
+        password = req.password.strip()
+
+        if not identifier:
+            raise HTTPException(
+                status_code=400,
+                detail={"error": {"code": "missing_identifier", "message": "Please enter your Employee ID (e.g. EMP-101) or Username."}},
+            )
+
+        # 1. Administrator check
+        if identifier.lower() in ("admin", "administrator"):
+            if password in ("password123", "admin123", "admin"):
+                token = issue_admin_token(username="Administrator")
+                log_audit("user_login", "Administrator", "admin", identifier=identifier)
+                return {
+                    "status": "success",
+                    "token": token,
+                    "role": "admin",
+                    "username": "Administrator",
+                    "employee_id": None,
+                }
+            raise HTTPException(
+                status_code=401,
+                detail={"error": {"code": "invalid_credentials", "message": "Invalid password for Administrator account."}},
+            )
+
+        # 2. Database Employee Check
+        emp = get_employee(identifier.upper())
+        if not emp:
+            emp = get_employee(identifier)
+
+        if emp:
+            if password in ("password123", "pass123", "admin123"):
+                token = issue_employee_token(
+                    employee_id=emp["employee_id"],
+                    role="user",
+                    username=emp["employee_name"],
+                )
+                log_audit("user_login", emp["employee_name"], "user", employee_id=emp["employee_id"])
+                return {
+                    "status": "success",
+                    "token": token,
+                    "role": "user",
+                    "username": emp["employee_name"],
+                    "employee_id": emp["employee_id"],
+                }
+            raise HTTPException(
+                status_code=401,
+                detail={"error": {"code": "invalid_credentials", "message": f"Invalid password for Employee {emp['employee_id']}. Default is password123."}},
+            )
+
+        # 3. Fallbacks for demo tokens / standard accounts
+        if identifier.lower() in ("user", "user-demo-token", "employee"):
+            emp101 = get_employee("EMP-101")
+            name = emp101["employee_name"] if emp101 else "Alice Smith"
+            token = issue_employee_token("EMP-101", role="user", username=name)
+            return {
+                "status": "success",
+                "token": token,
+                "role": "user",
+                "username": name,
+                "employee_id": "EMP-101",
+            }
+
+        if identifier.lower() in ("admin-demo-token",):
+            token = issue_admin_token("Administrator")
+            return {
+                "status": "success",
+                "token": token,
+                "role": "admin",
+                "username": "Administrator",
+                "employee_id": None,
+            }
+
+        raise HTTPException(
+            status_code=401,
+            detail={"error": {"code": "user_not_found", "message": f"No employee found with ID '{identifier}'. Try EMP-101, EMP-102, or admin."}},
+        )
+
     @app.post("/chat", response_model=ChatResponse)
     async def chat(request: UserRequest, user: dict = Depends(require_roles("user", "admin"))):
         sanitized_message = redact_pii(request.message)
@@ -187,6 +286,9 @@ def create_app() -> FastAPI:
         state = graph.invoke(
             {
                 "user_input": request.message,
+                "user_role": user.get("role", "user"),
+                "user_name": user.get("username", "user"),
+                "user_employee_id": user.get("employee_id"),
                 "route": "",
                 "response": "",
                 "score": 0,
@@ -204,39 +306,66 @@ def create_app() -> FastAPI:
             route=state.get("route", "SUPPORT"),
         )
 
+        session_id = record_chat_interaction(
+            session_id=request.session_id,
+            employee_id=user.get("employee_id"),
+            username=user.get("username"),
+            user_role=user.get("role", "user"),
+            user_message=request.message,
+            agent_response=state.get("response", {}),
+            route=state.get("route", "SUPPORT"),
+            score=state.get("score"),
+            approved=state.get("approved"),
+        )
+
         return ChatResponse(
             route=state.get("route", "SUPPORT"),
             response=state.get("response", {}),
             score=state.get("score"),
             approved=state.get("approved"),
             iteration=state.get("iteration", 0),
+            session_id=session_id,
         )
 
-    @app.get("/ticket/{ticket_id}")
-    def fetch_ticket(ticket_id: str, user: dict = Depends(require_roles("user", "admin"))):
-        ticket = get_ticket(ticket_id)
-        if ticket is None:
-            raise AppError(f"Ticket '{ticket_id}' was not found.", status_code=404, code="ticket_not_found")
+    @app.post("/upload")
+    async def upload_document(
+        file: UploadFile = File(...),
+        user: dict = Depends(require_roles("user", "admin")),
+    ):
+        filename = file.filename or "uploaded_document.txt"
+        file_bytes = await file.read()
+        if len(file_bytes) > 15 * 1024 * 1024:
+            raise HTTPException(status_code=400, detail={"error": {"code": "file_too_large", "message": "File size exceeds 15MB limit."}})
 
-        log_audit("ticket_lookup", user.get("username"), user.get("role"), ticket_id=ticket_id, status=ticket.get("status"))
-        return ticket
+        parsed = parse_document(file_bytes, filename)
+        if not parsed.get("success"):
+            err_msg = parsed.get("error", "Unable to extract text from document.")
+            raise HTTPException(status_code=422, detail={"error": {"code": "extraction_failed", "message": err_msg}})
 
-    @app.get("/tickets")
-    def fetch_tickets(user: dict = Depends(require_roles("user", "admin"))):
-        log_audit("list_tickets", user.get("username"), user.get("role"))
-        return list_tickets()
-
-    @app.post("/tickets")
-    def create_new_ticket(payload: dict, user: dict = Depends(require_roles("user", "admin"))):
-        ticket = create_ticket(
-            payload.get("summary", ""),
-            category=payload.get("category", "general"),
-            priority=payload.get("priority", "normal"),
-            requester=payload.get("requester"),
-            assignee=payload.get("assignee"),
+        log_audit(
+            "document_uploaded",
+            user.get("username"),
+            user.get("role"),
+            filename=filename,
+            word_count=parsed.get("word_count"),
         )
-        log_audit("create_ticket", user.get("username"), user.get("role"), ticket_id=ticket.get("ticket_id"))
-        return ticket
+        return parsed
+
+    @app.get("/chat/sessions")
+    def fetch_chat_sessions(user: dict = Depends(require_roles("user", "admin"))):
+        log_audit("list_chat_sessions", user.get("username"), user.get("role"))
+        return list_chat_sessions(user.get("employee_id"), user.get("role", "user"))
+
+    @app.get("/chat/sessions/{session_id}")
+    def fetch_chat_session_history(session_id: str, user: dict = Depends(require_roles("user", "admin"))):
+        log_audit("get_chat_session", user.get("username"), user.get("role"), session_id=session_id)
+        return get_chat_session_history(session_id, user.get("employee_id"), user.get("role", "user"))
+
+    @app.delete("/chat/sessions/{session_id}")
+    def remove_chat_session(session_id: str, user: dict = Depends(require_roles("user", "admin"))):
+        log_audit("delete_chat_session", user.get("username"), user.get("role"), session_id=session_id)
+        success = delete_chat_session(session_id, user.get("employee_id"), user.get("role", "user"))
+        return {"status": "success" if success else "not_found", "deleted": session_id}
 
     @app.get("/employees")
     def fetch_employees(user: dict = Depends(require_roles("admin"))):
@@ -257,21 +386,16 @@ def create_app() -> FastAPI:
         log_audit("get_employee", user.get("username"), user.get("role"), employee_id=employee_id)
         return row
 
-    @app.get("/reviews")
-    def fetch_reviews(user: dict = Depends(require_roles("user", "admin"))):
-        log_audit("list_reviews", user.get("username"), user.get("role"))
-        return list_reviews()
-
-    @app.post("/reviews")
-    def create_new_review(payload: dict, user: dict = Depends(require_roles("user", "admin"))):
-        review = create_review(payload)
-        log_audit("create_review", user.get("username"), user.get("role"), review_id=review.get("review_id"))
-        return review
-
     @app.get("/security-checks")
     def fetch_security_checks(user: dict = Depends(require_roles("user", "admin"))):
         log_audit("list_security_checks", user.get("username"), user.get("role"))
-        return list_security_checks()
+        checks = list_security_checks()
+        if user.get("role") != "admin":
+            emp_id = user.get("employee_id")
+            if emp_id:
+                return [c for c in checks if str(c.get("employee_id", "")).upper() == emp_id.upper()]
+            return []
+        return checks
 
     @app.post("/security-checks")
     def create_new_security_check(payload: dict, user: dict = Depends(require_roles("user", "admin"))):
@@ -279,10 +403,36 @@ def create_app() -> FastAPI:
         log_audit("create_security_check", user.get("username"), user.get("role"), security_id=security_check.get("security_id"))
         return security_check
 
+    @app.post("/security-checks/run-scheduled-audit")
+    def trigger_scheduled_security_audit(user: dict = Depends(require_roles("admin"))):
+        from backend.job.security_job import execute as run_audit_job
+        report = run_audit_job()
+        log_audit("run_scheduled_security_audit", user.get("username"), user.get("role"), flagged=report.get("flagged_count"))
+        return report
+
     @app.get("/workflow-states")
     def fetch_workflow_states(user: dict = Depends(require_roles("admin"))):
         log_audit("list_workflow_states", user.get("username"), user.get("role"))
         return list_workflow_states()
+
+    @app.get("/knowledge/search")
+    def search_knowledge(q: str, limit: int = 3, user: dict = Depends(require_roles("user", "admin"))):
+        from backend.services.vector_store_service import search_similar
+        results = search_similar(q, n_results=limit)
+        log_audit("search_knowledge", user.get("username"), user.get("role"), query=q, matches=len(results))
+        return {"query": q, "count": len(results), "results": results}
+
+    @app.post("/knowledge")
+    def add_knowledge(payload: dict, user: dict = Depends(require_roles("admin"))):
+        from backend.services.vector_store_service import add_documents
+        doc = payload.get("content") or payload.get("document", "")
+        if not doc:
+            raise AppError("Missing document content", status_code=400, code="invalid_payload")
+        metadata = payload.get("metadata") or {"source": "admin_upload"}
+        doc_id = payload.get("id")
+        add_documents([doc], metadatas=[metadata], ids=[doc_id] if doc_id else None)
+        log_audit("add_knowledge", user.get("username"), user.get("role"), doc_id=doc_id)
+        return {"status": "success", "message": "Document indexed into vector store"}
 
     @app.post("/workflow-states")
     def create_workflow_state(payload: dict, user: dict = Depends(require_roles("admin"))):
@@ -306,7 +456,7 @@ def create_app() -> FastAPI:
     @app.post("/user-actions")
     def create_new_user_action(payload: dict, user: dict = Depends(require_roles("admin"))):
         action = create_user_action(payload)
-        log_audit("create_user_action", user.get("username"), user.get("role"), action=action.get("action"))
+        log_audit("create_user_action", user.get("username"), user.get("role"), user_action=action.get("action"))
         return action
 
     @app.get("/health", response_model=HealthResponse)

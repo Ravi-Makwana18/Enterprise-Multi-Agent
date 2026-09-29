@@ -33,7 +33,23 @@ def _clean_topic(text: str) -> str:
         text.strip(),
         flags=re.IGNORECASE,
     )
-    return cleaned.strip() or text.strip()
+    cleaned = re.sub(r"^(?:about|on|for|regarding)\s+", "", cleaned.strip(), flags=re.IGNORECASE)
+    cleaned = cleaned.strip(".?! \t\n")
+    return cleaned
+
+
+def validate_writing_topic(text: str) -> tuple[str, bool, list[str], list[str]]:
+    """Validate whether the user provided a sufficient topic for blog generation."""
+    topic = _clean_topic(text)
+    invalid_topics = {"", "a", "an", "the", "blog", "post", "article", "draft", "write", "write a blog", "blog post", "essay"}
+    if len(topic) < 3 or topic.lower() in invalid_topics:
+        return "", False, [
+            "No topic or subject was specified for the article."
+        ], [
+            "Provide a subject: e.g., 'Write a blog about microservices in enterprise banking'",
+            "Include key points, themes, or target audience if desired."
+        ]
+    return topic, True, [], []
 
 
 def _generate_fallback_blog(topic: str) -> str:

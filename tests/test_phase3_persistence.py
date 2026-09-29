@@ -4,7 +4,7 @@ import unittest
 
 from fastapi.testclient import TestClient
 
-from backend.db import initialize_database, get_db_session
+from backend.db import initialize_database
 from backend.main import app
 from backend.services.ticket_service import create_ticket, get_ticket, list_tickets
 from backend.services.workflow_state_service import save_workflow_state, get_workflow_state
@@ -32,10 +32,10 @@ class TestPhase3Persistence(unittest.TestCase):
         loaded = get_workflow_state("request-id-1")
         self.assertEqual(loaded["route"], "BLOG")
 
-    def test_ticket_list_endpoint_is_available(self):
-        create_ticket("List test")
+    def test_workflow_states_endpoint_is_available(self):
+        save_workflow_state("request-id-2", {"user_input": "salary check", "route": "SALARY", "score": 90, "approved": True})
         response = self.client.get(
-            "/tickets",
+            "/workflow-states",
             headers={"Authorization": "Bearer admin-demo-token"},
         )
         self.assertEqual(response.status_code, 200)

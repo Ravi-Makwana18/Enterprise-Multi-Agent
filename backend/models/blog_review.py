@@ -13,5 +13,7 @@ class BlogReview(BaseModel):
     risk_level: Optional[str] = "medium"
     requires_human_review: bool = False
     fallback: bool = False
+    quality_criteria: Optional[dict] = None
+    iteration: Optional[int] = 0
 
     model_config = {"extra": "ignore"}

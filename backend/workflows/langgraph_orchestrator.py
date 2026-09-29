@@ -1,6 +1,6 @@
+import re
 import uuid
 from datetime import datetime, timezone
-from typing import Literal
 
 from langgraph.graph import END, StateGraph
 
@@ -39,6 +39,9 @@ def normalize_state(state: AgentState) -> AgentState:
     normalized["last_error"] = normalized.get("last_error")
     normalized["cancelled"] = bool(normalized.get("cancelled", False))
     normalized["replay_of"] = normalized.get("replay_of")
+    normalized["user_role"] = str(normalized.get("user_role") or "user").strip().lower()
+    normalized["user_name"] = str(normalized.get("user_name") or "user").strip()
+    normalized["user_employee_id"] = normalized.get("user_employee_id")
     return normalized
 
 
@@ -85,19 +88,29 @@ def _llm_classify_intent(user_input: str) -> str:
 
 def classify_request(state: AgentState):
     normalized = normalize_state(state)
-    text = normalized["user_input"].lower()
+    from backend.services.intent_service import handle_governed_intent, classify_user_intent
 
-    # 1. Deterministic fast heuristic
-    if any(w in text for w in ("blog", "article", "draft", "write", "rewrite", "essay")):
-        route = "BLOG"
-    elif any(w in text for w in ("salary", "pay", "payroll", "compensation", "wage", "hra", "bonus")):
-        route = "SALARY"
-    elif any(w in text for w in ("security", "compliance", "police verification", "aadhaar", "clearance", "audit")):
-        route = "SECURITY"
-    elif any(w in text for w in ("ticket", "incident", "outage", "broken", "issue", "bug", "support", "help", "login")):
+    # 1. Criticality & Safety Governance (Adversarial Prompts, RBAC Violations, Greetings, General FAQs, Out-of-Scope)
+    governed = handle_governed_intent(normalized)
+    if governed is not None:
+        record_observation(governed, "governed_intent_handled", status=governed.get("status"))
+        return governed
+
+    # 2. Specialist Workflow Routing (SALARY, SECURITY, BLOG, SUPPORT)
+    text = normalized["user_input"].lower()
+    intent = classify_user_intent(normalized["user_input"])
+    if intent in ROUTE_TO_NODE:
+        route = intent
+    elif re.search(r"\b(ticket|incident|outage|login|password reset|vpn|service desk|it help|server down|crash)\b", text):
         route = "SUPPORT"
+    elif re.search(r"\b(blog|article|essay|proofread|story|publish|attached document|manuscript)\b", text) or (re.search(r"\b(write|draft|rewrite|evaluate draft|review draft)\b", text) and not re.search(r"\b(ticket|incident)\b", text)):
+        route = "BLOG"
+    elif re.search(r"\b(security clearance|police verification|aadhaar|passport|background check|compliance audit)\b", text) or (re.search(r"\bsecurity\b", text) and not re.search(r"\b(ticket|incident|blog|article|draft)\b", text)):
+        route = "SECURITY"
+    elif re.search(r"\b(salary|payroll|compensation|hra|bonus|take[- ]home|wages?|pay slip|payslip)\b", text):
+        route = "SALARY"
     else:
-        # 2. LLM intent classification for complex or subtle queries
+        # LLM intent classification for complex or subtle queries
         route = _llm_classify_intent(text)
 
     normalized["route"] = route
@@ -239,8 +252,12 @@ def replay_workflow(state: AgentState, snapshot: dict):
     return normalized
 
 
-def route_decision(state: AgentState) -> Literal["blog_agent", "salary_agent", "security_agent", "support_agent"]:
+def route_decision(state: AgentState):
     normalized = normalize_state(state)
+    # If request was already resolved by governance (greeting, FAQ, security violation, out-of-scope)
+    if normalized.get("status") in {"rejected", "forbidden", "conversational", "out_of_scope", "completed", "approved"} and normalized.get("response", {}).get("message"):
+        return END
+
     route = normalize_route(normalized.get("route"))
     if route not in ROUTE_TO_NODE:
         normalized["status"] = "failed"
@@ -269,6 +286,7 @@ builder.add_conditional_edges(
         "salary_agent": "salary_agent",
         "security_agent": "security_agent",
         "support_agent": "support_agent",
+        END: END,
     }
 )
 

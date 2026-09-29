@@ -9,6 +9,8 @@ class ChatResponse(BaseModel):
     score: int | None = Field(default=None, description="Quality score when available.")
     approved: bool | None = Field(default=None, description="Approval flag when available.")
     iteration: int = Field(default=0, description="Workflow iteration count.")
+    session_id: str | None = Field(default=None, description="Chat session ID.")
+
 
 
 class HealthResponse(BaseModel):

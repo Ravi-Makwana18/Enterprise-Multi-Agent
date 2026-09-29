@@ -66,16 +66,4 @@ def calculate_salary(
         "review_reasons": review_reasons,
     }
 
-
-def evaluate_payroll_decision(payload: dict) -> dict:
-    result = calculate_salary(
-        float(payload.get("basic_salary", 0)),
-        float(payload.get("hra", 0)),
-        float(payload.get("bonus", 0)),
-        tax_rate=float(payload.get("tax_rate", 0.10)),
-    )
-    return {
-        **result,
-        "workflow": "salary",
-        "human_approval_required": result["approval_required"],
-    }
+

@@ -13,10 +13,13 @@ builder.set_entry_point("review")
 
 
 def review_decision(state):
-    if state["approved"]:
+    if state.get("status") == "insufficient_input":
         return "approved"
 
-    if state["iteration"] >= 3:
+    if state.get("approved"):
+        return "approved"
+
+    if state.get("iteration", 0) >= 3:
         return "approved"
 
     return "revise"

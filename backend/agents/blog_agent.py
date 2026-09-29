@@ -1,8 +1,10 @@
 import logging
-from backend.services import llm_service
 
 logger = logging.getLogger(__name__)
 
+
+# NOTE: Active blog review is handled by agents/blog_ai_review.py::ai_review_blog().
+# The prompt below documents the intended evaluation schema for reference.
 _SYSTEM_PROMPT = """You are an expert enterprise content reviewer and copy editor.
 Analyze blog posts and articles for publication readiness.
 Evaluate tone, clarity, grammar, and structural integrity.
@@ -25,8 +27,3 @@ Return ONLY a JSON object with these fields:
   "requires_human_review": <true|false>
 }}
 """
-
-
-def analyze_blog(content: str) -> dict:
-    prompt = _PROMPT.format(content=content[:3500])
-    return llm_service.generate(prompt, model_key="blog", system_prompt=_SYSTEM_PROMPT)
